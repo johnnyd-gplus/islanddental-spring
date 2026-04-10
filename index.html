@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Start Now, Smile by Summer | Island Dental Associates</title>
-  <meta name="description" content="You've been thinking about it. Now's the time. Book a free consultation at Island Dental Associates and feel confident in your smile before summer hits.">
+  <title>Start Now, Smile All Summer | Island Dental Associates</title>
+  <meta name="description" content="If you've been thinking about making a change, this is the time. Book a free consultation at Island Dental Associates and smile all summer long.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
@@ -237,8 +237,14 @@
       font-weight: 400;
       color: rgba(255,255,255,0.88);
       line-height: 1.6;
-      margin-bottom: 36px;
-      max-width: 420px;
+      margin-bottom: 16px;
+      max-width: 440px;
+    }
+    .hero-support {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--yellow);
+      margin-bottom: 32px;
     }
     .hero-buttons {
       display: flex;
@@ -351,56 +357,224 @@
     }
 
     /* ==========================================================
-       FREE EXAM CTA
+       OUTCOME SHOWCASE
     ========================================================== */
-    .free-exam {
+    .outcome {
+      padding: 80px 0 64px;
+    }
+    .outcome h2 {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 48px;
+      font-weight: 500;
+      color: var(--navy);
+      line-height: 1.15;
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .outcome-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .outcome-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--border);
+    }
+    .outcome-card-img {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+    }
+    .outcome-card-img .img-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #f0e6e0 0%, #f5ede8 100%);
+    }
+    .outcome-card-body {
+      padding: 20px;
+    }
+    .outcome-card h3 {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .outcome-card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ==========================================================
+       WHY NOW (urgency)
+    ========================================================== */
+    .why-now {
+      padding: 0;
+      background: var(--off-white);
+    }
+    .why-now-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1440px;
+      margin: 0 auto;
+      min-height: 560px;
+    }
+    .why-now-content {
+      padding: 72px 72px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .why-now-eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--teal);
+      margin-bottom: 16px;
+    }
+    .why-now-content h2 {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 44px;
+      font-weight: 500;
+      color: var(--navy);
+      line-height: 1.12;
+      margin-bottom: 24px;
+    }
+    .why-now-content p {
+      font-size: 17px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 20px;
+      max-width: 440px;
+    }
+    .why-now-bullets {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+    .why-now-bullets li {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--navy);
+      padding: 6px 0;
+      padding-left: 24px;
+      position: relative;
+    }
+    .why-now-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 8px;
+      height: 8px;
+      background: var(--teal);
+      border-radius: 50%;
+    }
+    .why-now-img {
+      min-height: 500px;
+    }
+    .why-now-img .img-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #d4c0b0 0%, #e8ddd4 100%);
+    }
+
+    /* ==========================================================
+       PROCESS STEPS
+    ========================================================== */
+    .process {
+      padding: 80px 0;
+    }
+    .process h2 {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 48px;
+      font-weight: 500;
+      color: var(--navy);
+      line-height: 1.15;
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+    .process-step {
+      text-align: center;
+      padding: 0 16px;
+    }
+    .process-number {
+      width: 64px;
+      height: 64px;
+      background: var(--teal);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 24px;
+      color: var(--white);
+    }
+    .process-step h3 {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .process-step p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
+    /* ==========================================================
+       OBJECTION REMOVAL
+    ========================================================== */
+    .objection {
       background: var(--navy);
       border-radius: var(--radius);
       overflow: hidden;
       display: grid;
       grid-template-columns: 1fr 1fr;
       max-width: 1296px;
-      margin: 0 auto 80px;
+      margin: 0 auto 0;
     }
-    .free-exam-content {
+    .objection-content {
       padding: 56px 56px;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
-    .free-exam-eyebrow {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--yellow);
-      margin-bottom: 16px;
-    }
-    .free-exam-content h2 {
+    .objection-content h2 {
       font-family: 'Nunito Sans', sans-serif;
       font-size: 40px;
       font-weight: 500;
       color: var(--white);
       line-height: 1.15;
-      margin-bottom: 10px;
+      margin-bottom: 24px;
     }
-    .free-exam-sub {
-      font-size: 18px;
-      font-style: italic;
-      color: rgba(255,255,255,0.75);
-      margin-bottom: 28px;
-    }
-    .free-exam-list {
-      list-style: disc;
-      padding-left: 20px;
+    .objection-content p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.7;
       margin-bottom: 32px;
+      max-width: 440px;
     }
-    .free-exam-list li {
-      font-size: 16px;
-      color: rgba(255,255,255,0.85);
-      margin-bottom: 10px;
-      list-style: disc;
+    .objection-img {
+      min-height: 400px;
+    }
+    .objection-img .img-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #c8d6e5 0%, #dfe6ed 100%);
     }
     .btn-amber {
       display: inline-flex;
@@ -420,195 +594,9 @@
       transition: background 0.2s;
     }
     .btn-amber:hover { background: #e5ad00; }
-    .free-exam-img {
-      min-height: 400px;
-    }
-    .free-exam-img .img-placeholder {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, #c8d6e5 0%, #dfe6ed 100%);
-    }
 
     /* ==========================================================
-       SECTION: DENTAL IMPLANTS TODAY
-    ========================================================== */
-    .implants-today {
-      padding: 80px 0 64px;
-    }
-    .implants-today h2 {
-      font-family: 'Nunito Sans', sans-serif;
-      font-size: 48px;
-      font-weight: 500;
-      color: var(--navy);
-      line-height: 1.15;
-      text-align: center;
-      margin-bottom: 56px;
-    }
-    .implants-today-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: start;
-    }
-    .implants-features { display: flex; flex-direction: column; gap: 40px; }
-    .feature-item { display: flex; flex-direction: column; gap: 6px; }
-    .feature-icon {
-      width: 40px;
-      height: 40px;
-      margin-bottom: 4px;
-    }
-    .feature-item h3 {
-      font-family: 'Nunito Sans', sans-serif;
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--navy);
-    }
-    .feature-item p {
-      font-size: 15px;
-      color: var(--muted);
-      line-height: 1.6;
-      max-width: 320px;
-    }
-    .implants-photo {
-      border-radius: var(--radius);
-      overflow: hidden;
-      height: 400px;
-    }
-    .implants-photo .img-placeholder {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, #b8c9db 0%, #d4dde8 100%);
-    }
-
-    /* ==========================================================
-       SECTION: PERMANENT LOOKS SO GOOD ON YOU
-    ========================================================== */
-    .permanent {
-      padding: 64px 0 80px;
-    }
-    .permanent h2 {
-      font-family: 'Nunito Sans', sans-serif;
-      font-size: 48px;
-      font-weight: 500;
-      color: var(--navy);
-      line-height: 1.15;
-      margin-bottom: 40px;
-    }
-    .permanent-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
-    .implant-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 32px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      align-items: center;
-    }
-    .implant-card-img {
-      height: 160px;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    .implant-card-img .img-placeholder {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, #f0e6e0 0%, #f5ede8 100%);
-    }
-    .implant-card h3 {
-      font-family: 'Nunito Sans', sans-serif;
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 8px;
-    }
-    .implant-card p {
-      font-size: 14px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    /* ==========================================================
-       SECTION: NOTHING SHOULD STOP YOU (Financing)
-    ========================================================== */
-    .afford {
-      padding: 64px 0;
-      background: var(--off-white);
-    }
-    .afford-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: center;
-      max-width: 1296px;
-      margin: 0 auto;
-      padding: 0 72px;
-    }
-    .afford-content h2 {
-      font-family: 'Nunito Sans', sans-serif;
-      font-size: 44px;
-      font-weight: 500;
-      color: var(--navy);
-      line-height: 1.12;
-      margin-bottom: 10px;
-    }
-    .afford-sub {
-      font-size: 17px;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 32px;
-    }
-    .afford-feature {
-      margin-bottom: 24px;
-    }
-    .afford-feature h3 {
-      font-family: 'Nunito Sans', sans-serif;
-      font-size: 17px;
-      font-weight: 800;
-      color: var(--navy);
-      margin-bottom: 4px;
-    }
-    .afford-feature p {
-      font-size: 15px;
-      color: var(--muted);
-      line-height: 1.6;
-      max-width: 400px;
-    }
-    .btn-solid-navy {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--navy);
-      color: var(--white);
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      font-size: 14px;
-      padding: 16px 32px;
-      border-radius: 40px;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      margin-top: 12px;
-      transition: background 0.2s;
-    }
-    .btn-solid-navy:hover { background: #0a143a; }
-    .afford-img {
-      border-radius: var(--radius);
-      overflow: hidden;
-      height: 520px;
-    }
-    .afford-img .img-placeholder {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, #a8c4a0 0%, #d0e0cc 100%);
-    }
-
-    /* ==========================================================
-       SECTION: FINANCIAL PARTNERS
+       PARTNER LOGOS
     ========================================================== */
     .partners {
       padding: 56px 0;
@@ -620,6 +608,11 @@
       font-weight: 500;
       color: var(--navy);
       line-height: 1.15;
+      margin-bottom: 8px;
+    }
+    .partners-sub {
+      font-size: 16px;
+      color: var(--muted);
       margin-bottom: 40px;
     }
     .partners-logos {
@@ -638,32 +631,32 @@
     }
 
     /* ==========================================================
-       SECTION: KEEP CALM (Sedation)
+       REASSURANCE METRICS
     ========================================================== */
-    .sedation {
+    .reassurance {
       padding: 72px 0;
     }
-    .sedation h2 {
+    .reassurance h2 {
       font-family: 'Nunito Sans', sans-serif;
       font-size: 44px;
       font-weight: 500;
       color: var(--navy);
       line-height: 1.15;
+      text-align: center;
       margin-bottom: 48px;
     }
-    .sedation-grid {
+    .reassurance-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
-      margin-bottom: 40px;
     }
-    .sedation-card {
+    .reassurance-card {
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 40px 28px;
       text-align: center;
     }
-    .sedation-icon {
+    .reassurance-icon {
       width: 56px;
       height: 56px;
       margin: 0 auto 20px;
@@ -671,150 +664,109 @@
       align-items: center;
       justify-content: center;
     }
-    .sedation-card h3 {
+    .reassurance-card h3 {
       font-family: 'Nunito Sans', sans-serif;
-      font-size: 20px;
+      font-size: 28px;
       font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 12px;
+      color: var(--blue);
+      margin-bottom: 8px;
     }
-    .sedation-card p {
+    .reassurance-card p {
       font-size: 15px;
       color: var(--muted);
       line-height: 1.65;
     }
-    .sedation-cta {
+
+    /* ==========================================================
+       MID-PAGE CTA
+    ========================================================== */
+    .mid-cta {
+      background: var(--teal);
+      padding: 80px 0;
       text-align: center;
     }
-    .btn-outline-navy {
+    .mid-cta h2 {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 48px;
+      font-weight: 500;
+      color: var(--white);
+      line-height: 1.12;
+      margin-bottom: 16px;
+    }
+    .mid-cta p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.9);
+      max-width: 540px;
+      margin: 0 auto 12px;
+      line-height: 1.6;
+    }
+    .mid-cta-support {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--yellow);
+      margin-bottom: 32px;
+    }
+    .btn-solid-navy {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: transparent;
-      color: var(--navy);
+      background: var(--navy);
+      color: var(--white);
       font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 15px;
-      padding: 15px 32px;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 16px 32px;
       border-radius: 40px;
-      border: 2px solid var(--navy);
+      border: none;
       cursor: pointer;
       text-decoration: none;
-      transition: background 0.2s, color 0.2s;
+      transition: background 0.2s;
     }
-    .btn-outline-navy:hover { background: var(--navy); color: var(--white); }
+    .btn-solid-navy:hover { background: #0a143a; }
 
     /* ==========================================================
-       SECTION: CHANGE YOUR SMILE
+       SOCIAL PROOF GALLERY
     ========================================================== */
-    .change-smile {
-      padding: 0;
-      background: var(--off-white);
+    .social-proof {
+      padding: 80px 0;
     }
-    .change-smile-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      max-width: 1440px;
-      margin: 0 auto;
-      min-height: 640px;
-    }
-    .change-smile-content {
-      padding: 72px 72px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .change-smile-content h2 {
-      font-family: 'Nunito Sans', sans-serif;
-      font-size: 44px;
-      font-weight: 500;
-      color: var(--navy);
-      line-height: 1.12;
-      margin-bottom: 32px;
-    }
-    .benefit-pills {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      margin-bottom: 16px;
-    }
-    .benefit-pill {
-      display: inline-block;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 30px;
-      padding: 12px 24px;
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--navy);
-      align-self: flex-start;
-    }
-    .change-smile-img {
-      min-height: 500px;
-    }
-    .change-smile-img .img-placeholder {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, #d4c0b0 0%, #e8ddd4 100%);
-    }
-    .change-smile-cta {
-      text-align: center;
-      padding: 32px 0 64px;
-      background: var(--off-white);
-    }
-
-    /* ==========================================================
-       SECTION: VIDEOS
-    ========================================================== */
-    .videos {
-      padding: 72px 0;
-    }
-    .videos h2 {
+    .social-proof h2 {
       font-family: 'Nunito Sans', sans-serif;
       font-size: 44px;
       font-weight: 500;
       color: var(--navy);
       line-height: 1.15;
-      margin-bottom: 40px;
+      text-align: center;
+      margin-bottom: 8px;
     }
-    .videos-grid {
+    .social-proof-sub {
+      font-size: 16px;
+      color: var(--muted);
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .social-proof-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
     }
-    .video-thumb {
+    .social-proof-img {
       border-radius: var(--radius);
       overflow: hidden;
-      aspect-ratio: 4/3;
-      position: relative;
+      aspect-ratio: 1;
     }
-    .video-thumb .img-placeholder {
+    .social-proof-img .img-placeholder {
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, #3a4a5a 0%, #5a6a7a 100%);
-    }
-    .video-play {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .video-play-btn {
-      width: 64px;
-      height: 64px;
-      background: rgba(255,255,255,0.9);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background: linear-gradient(135deg, #d4c0b0 0%, #e8ddd4 100%);
     }
 
     /* ==========================================================
-       SECTION: TESTIMONIALS
+       TESTIMONIALS
     ========================================================== */
     .testimonials {
       padding: 64px 0 72px;
+      background: var(--off-white);
     }
     .testimonials h2 {
       font-family: 'Nunito Sans', sans-serif;
@@ -830,7 +782,7 @@
       gap: 24px;
     }
     .testimonial-card {
-      background: var(--light-blue);
+      background: var(--white);
       border-radius: var(--radius);
       padding: 32px 28px;
     }
@@ -856,7 +808,7 @@
     }
 
     /* ==========================================================
-       SECTION: FAQs
+       FAQs
     ========================================================== */
     .faqs {
       padding: 72px 0;
@@ -927,13 +879,13 @@
     }
 
     /* ==========================================================
-       SECTION: LOCATIONS (Let's do this!)
+       FINAL CTA + LOCATIONS
     ========================================================== */
     .locations {
       padding: 80px 0;
       text-align: center;
     }
-    .locations > h2 {
+    .locations-headline {
       font-family: 'Nunito Sans', sans-serif;
       font-size: 48px;
       font-weight: 500;
@@ -944,8 +896,16 @@
       font-size: 17px;
       color: var(--muted);
       max-width: 560px;
-      margin: 0 auto 48px;
+      margin: 0 auto 12px;
       line-height: 1.6;
+    }
+    .locations-cta-row {
+      margin-bottom: 16px;
+    }
+    .locations-sub {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 48px;
     }
     .locations-grid {
       display: grid;
@@ -1122,18 +1082,20 @@
        RESPONSIVE
     ========================================================== */
     @media (max-width: 1024px) {
-      .container, .container-narrow, .afford-grid { padding: 0 32px; }
+      .container, .container-narrow { padding: 0 32px; }
       .hero-content { padding: 60px 40px; }
       .hero h1 { font-size: 42px; }
-      .implants-today h2, .permanent h2, .afford-content h2,
-      .change-smile-content h2, .sedation h2, .videos h2,
-      .testimonials h2, .locations > h2 { font-size: 36px; }
+      .outcome h2, .why-now-content h2, .process h2,
+      .reassurance h2, .mid-cta h2, .social-proof h2,
+      .testimonials h2, .locations-headline { font-size: 36px; }
       .stat-number { font-size: 38px; }
-      .free-exam { margin-left: 32px; margin-right: 32px; }
+      .objection { margin-left: 32px; margin-right: 32px; }
+      .outcome-grid { grid-template-columns: repeat(2, 1fr); }
+      .social-proof-grid { grid-template-columns: repeat(3, 1fr); }
     }
 
     @media (max-width: 768px) {
-      .container, .container-narrow, .afford-grid { padding: 0 20px; }
+      .container, .container-narrow { padding: 0 20px; }
       .hero { margin: 0; border-radius: 0; min-height: 500px; }
       .hero-bg .img-placeholder { border-radius: 0; }
       .hero-overlay { border-radius: 0; }
@@ -1148,24 +1110,24 @@
       }
       .stat-number { font-size: 32px; }
 
-      .free-exam {
+      .outcome-grid { grid-template-columns: 1fr; }
+
+      .why-now-inner { grid-template-columns: 1fr; }
+      .why-now-content { padding: 48px 24px; }
+      .why-now-img { min-height: 320px; }
+
+      .process-grid { grid-template-columns: 1fr; gap: 48px; }
+
+      .objection {
         grid-template-columns: 1fr;
         margin-left: 20px; margin-right: 20px;
       }
-      .free-exam-img { min-height: 280px; }
+      .objection-img { min-height: 280px; }
 
-      .implants-today-grid { grid-template-columns: 1fr; }
-      .permanent-grid { grid-template-columns: 1fr; }
-      .implant-card { grid-template-columns: 120px 1fr; }
+      .reassurance-grid { grid-template-columns: 1fr; }
 
-      .afford-grid { grid-template-columns: 1fr; }
-      .afford-img { height: 320px; order: -1; }
+      .social-proof-grid { grid-template-columns: repeat(2, 1fr); }
 
-      .sedation-grid { grid-template-columns: 1fr; }
-      .change-smile-inner { grid-template-columns: 1fr; }
-      .change-smile-img { min-height: 320px; }
-
-      .videos-grid { grid-template-columns: 1fr; }
       .testimonials-grid { grid-template-columns: 1fr; }
 
       .faqs-grid { grid-template-columns: 1fr; }
@@ -1185,7 +1147,7 @@
        TOP BANNER
   ===================================================== -->
   <div class="top-banner" id="topBanner">
-    <p>Summer's almost here. Your free consultation is the easiest first step.</p>
+    <p>Save on select services. Book your free consultation today.</p>
     <button class="top-banner-close" aria-label="Close banner" onclick="document.getElementById('topBanner').style.display='none'">&times;</button>
   </div>
 
@@ -1221,29 +1183,40 @@
     </div>
   </header>
 
-  <!-- =====================================================
-       HERO
-  ===================================================== -->
+
+  <!-- ==========================================================
+       COMPONENT 1 — HERO (Variant C default)
+  ========================================================== -->
+  <!--
+    VARIANT A headline: "Ready Your Smile for Summer"
+    VARIANT A subhead: "A small step now can make a big difference in how you feel all summer."
+    VARIANT A CTA: "Get Started Today"
+
+    VARIANT B headline: "Summer's Coming! Don't Let Your Smile Wait."
+    VARIANT B subhead: "The best time to feel good about your smile is now. We'll help you take the first step."
+    VARIANT B CTA: "Start with a Free Consult"
+  -->
   <section class="hero" aria-labelledby="hero-heading">
     <div class="hero-bg">
-      <!-- Replace with actual hero photo -->
-      <div class="img-placeholder">Hero photo: couple smiling together outdoors</div>
+      <!-- Replace with actual hero photo matching Variant C Meta ad -->
+      <div class="img-placeholder">Hero photo: confident smile, summer setting</div>
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <div class="hero-eyebrow">Spring &rarr; Summer 2025</div>
-      <h1 id="hero-heading">Get a new smile today and smile all summer long</h1>
-      <p class="hero-subtitle">We provide comprehensive services, including same-day dentures, same-day implants, teeth straightening, extractions, root canals and more, ensuring all your dental needs are met.</p>
+      <div class="hero-eyebrow">Spring &rarr; Summer 2026</div>
+      <h1 id="hero-heading">Start Now. Smile All Summer.</h1>
+      <p class="hero-subtitle">If you've been thinking about making a change, this is the time. Something small or something bigger — we'll make it simple.</p>
+      <p class="hero-support">Save on select services. Flexible options.</p>
       <div class="hero-buttons">
-        <a href="#locations" class="btn-cta-teal">Book your free consultation</a>
-        <a href="#" class="btn-outline-white">Take the quiz</a>
+        <a href="#locations" class="btn-cta-teal">Book Your Free Consultation</a>
       </div>
     </div>
   </section>
 
-  <!-- =====================================================
-       TRUST BAR
-  ===================================================== -->
+
+  <!-- ==========================================================
+       COMPONENT 2 — STATS / TRUST BAR
+  ========================================================== -->
   <div class="trust-bar" aria-label="Benefits">
     <div class="trust-track">
       <div class="trust-item"><span class="trust-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Free consultation</div>
@@ -1251,7 +1224,7 @@
       <div class="trust-item"><span class="trust-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Full lab on site</div>
       <div class="trust-item"><span class="trust-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>0% financing</div>
       <div class="trust-item"><span class="trust-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Insurance accepted</div>
-      <div class="trust-item"><span class="trust-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Same-day dentures</div>
+      <div class="trust-item"><span class="trust-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Same-day options</div>
       <div class="trust-item"><span class="trust-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>50+ insurance carriers</div>
       <div class="trust-item"><span class="trust-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Specialist team on-site</div>
       <div class="trust-item"><span class="trust-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Walk-ins welcome</div>
@@ -1261,199 +1234,164 @@
       <div class="trust-item"><span class="trust-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Full lab on site</div>
       <div class="trust-item"><span class="trust-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>0% financing</div>
       <div class="trust-item"><span class="trust-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Insurance accepted</div>
-      <div class="trust-item"><span class="trust-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Same-day dentures</div>
+      <div class="trust-item"><span class="trust-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Same-day options</div>
       <div class="trust-item"><span class="trust-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>50+ insurance carriers</div>
       <div class="trust-item"><span class="trust-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Specialist team on-site</div>
       <div class="trust-item"><span class="trust-check"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Walk-ins welcome</div>
     </div>
   </div>
 
-  <!-- =====================================================
-       STATS
-  ===================================================== -->
   <section class="stats" aria-label="Statistics">
     <div class="container">
       <div class="stats-grid">
         <div class="stat-item">
-          <div class="stat-number">100%</div>
-          <div class="stat-label">satisfaction guarantee</div>
-        </div>
-        <div class="stat-item">
           <div class="stat-number">30+</div>
-          <div class="stat-label">years of experience</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">50+</div>
-          <div class="stat-label">insurance carriers accepted</div>
+          <div class="stat-label">Years serving Long Island</div>
         </div>
         <div class="stat-item">
           <div class="stat-number">2,000+</div>
-          <div class="stat-label">5-star Google reviews</div>
+          <div class="stat-label">Smiles transformed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">5-Star</div>
+          <div class="stat-label">Rated on Google</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Services, all under one roof</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- =====================================================
-       FREE EXAM CTA
-  ===================================================== -->
-  <section class="free-exam" aria-labelledby="free-exam-heading">
-    <div class="free-exam-content">
-      <div class="free-exam-eyebrow">The Easiest First Step</div>
-      <h2 id="free-exam-heading">Just start. It's free.</h2>
-      <p class="free-exam-sub">No commitment. No pressure. Just a conversation about what's possible.</p>
-      <ul class="free-exam-list">
-        <li>Tell us what you've been thinking about</li>
-        <li>Get a full picture with complimentary 3D scans</li>
-        <li>See your options — from quick fixes to bigger changes</li>
-        <li>Leave with a clear plan and zero obligation</li>
-      </ul>
-      <a href="#locations" class="btn-amber">Book your free visit</a>
+
+  <!-- ==========================================================
+       COMPONENT 3 — OUTCOME SHOWCASE
+  ========================================================== -->
+  <section class="outcome" aria-labelledby="outcome-heading">
+    <div class="container">
+      <h2 id="outcome-heading">Your best smile looks really good on you.</h2>
+      <div class="outcome-grid">
+        <div class="outcome-card">
+          <div class="outcome-card-img">
+            <!-- Replace with actual before/after or result photo -->
+            <div class="img-placeholder">Photo: whitening result</div>
+          </div>
+          <div class="outcome-card-body">
+            <h3>Whitening</h3>
+            <p>One visit. Noticeably brighter.</p>
+          </div>
+        </div>
+        <div class="outcome-card">
+          <div class="outcome-card-img">
+            <div class="img-placeholder">Photo: Invisalign result</div>
+          </div>
+          <div class="outcome-card-body">
+            <h3>Invisalign</h3>
+            <p>Straighter, without anyone knowing.</p>
+          </div>
+        </div>
+        <div class="outcome-card">
+          <div class="outcome-card-img">
+            <div class="img-placeholder">Photo: implant result</div>
+          </div>
+          <div class="outcome-card-body">
+            <h3>Implants</h3>
+            <p>Permanent. Natural. Yours.</p>
+          </div>
+        </div>
+        <div class="outcome-card">
+          <div class="outcome-card-img">
+            <div class="img-placeholder">Photo: full restoration result</div>
+          </div>
+          <div class="outcome-card-body">
+            <h3>Full Restoration</h3>
+            <p>A complete smile, rebuilt.</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="free-exam-img">
+  </section>
+
+
+  <!-- ==========================================================
+       COMPONENT 4 — WHY NOW? (Urgency)
+  ========================================================== -->
+  <section class="why-now" aria-labelledby="why-now-heading">
+    <div class="why-now-inner">
+      <div class="why-now-content">
+        <div class="why-now-eyebrow">Why Now?</div>
+        <h2 id="why-now-heading">Your smile, this summer — not next year.</h2>
+        <p>May is when the calendar fills up — trips, events, photos, social time. If you've been meaning to do something about your smile, this is the moment. Not someday. Now.</p>
+        <ul class="why-now-bullets">
+          <li>You've been thinking about it. Make this the summer you do it.</li>
+          <li>One appointment can change how you walk into the season.</li>
+          <li>Save on select services. Start before summer.</li>
+        </ul>
+        <a href="#locations" class="btn-cta-teal">Book Your Free Consultation</a>
+      </div>
+      <div class="why-now-img">
+        <!-- Replace with lifestyle photo -->
+        <div class="img-placeholder">Photo: person smiling outdoors in summer</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================
+       COMPONENT 5 — PROCESS STEPS
+  ========================================================== -->
+  <section class="process" aria-labelledby="process-heading">
+    <div class="container">
+      <h2 id="process-heading">Getting started is easier than you think</h2>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="process-number">1</div>
+          <h3>Book a Free Consult</h3>
+          <p>Come in, meet the team, and talk about what you've been thinking about. No pressure, no commitment.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-number">2</div>
+          <h3>We'll Build Your Plan</h3>
+          <p>Every smile is different. We'll walk you through what's possible and what makes sense for you — with flexible options to fit your timeline and budget.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-number">3</div>
+          <h3>Start Smiling</h3>
+          <p>Whether it's one appointment or a longer journey, we make every step comfortable. And you'll feel the difference before summer is over.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================
+       COMPONENT 6 — OBJECTION REMOVAL + CTA (Variant C CTA)
+  ========================================================== -->
+  <!--
+    VARIANT A CTA: "Get Started Today"
+    VARIANT B CTA: "Start with a Free Consult"
+  -->
+  <section class="objection" aria-labelledby="objection-heading">
+    <div class="objection-content">
+      <h2 id="objection-heading">Nothing should stop you from a smile you love.</h2>
+      <p>Not sure which service is right for you? That's exactly what the consult is for. Worried about cost? We offer flexible options and work with most insurance plans. Nervous about coming in? Our team has heard it all — and we're here to make it easy.</p>
+      <a href="#locations" class="btn-amber">Book Your Free Consultation</a>
+    </div>
+    <div class="objection-img">
       <!-- Replace with actual photo -->
-      <div class="img-placeholder">Photo: woman smiling at dental consultation</div>
+      <div class="img-placeholder">Photo: patient smiling in dental chair</div>
     </div>
   </section>
 
-  <!-- =====================================================
-       DENTAL IMPLANTS TODAY
-  ===================================================== -->
-  <section class="implants-today" aria-labelledby="implants-heading">
-    <div class="container">
-      <h2 id="implants-heading">This is easier than you think</h2>
-      <div class="implants-today-grid">
-        <div class="implants-features">
-          <div class="feature-item">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="14" cy="12" r="4" stroke="#0F1C49" stroke-width="2"/><circle cx="26" cy="12" r="4" stroke="#0F1C49" stroke-width="2"/><circle cx="14" cy="26" r="4" stroke="#2ABFC7" stroke-width="2"/><circle cx="26" cy="26" r="4" stroke="#2ABFC7" stroke-width="2"/><line x1="18" y1="12" x2="22" y2="12" stroke="#0F1C49" stroke-width="1.5"/><line x1="14" y1="16" x2="14" y2="22" stroke="#0F1C49" stroke-width="1.5"/><line x1="26" y1="16" x2="26" y2="22" stroke="#0F1C49" stroke-width="1.5"/></svg>
-            </div>
-            <h3>Everything under one roof</h3>
-            <p>No referrals, no running around. Every specialist you might need is right here — one place, one team.</p>
-          </div>
-          <div class="feature-item">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="8" y="12" width="24" height="16" rx="3" stroke="#0F1C49" stroke-width="2"/><rect x="12" y="16" width="6" height="4" rx="1" fill="#2ABFC7"/><rect x="22" y="16" width="6" height="4" rx="1" fill="#2ABFC7"/><line x1="12" y1="24" x2="28" y2="24" stroke="#0F1C49" stroke-width="1.5"/></svg>
-            </div>
-            <h3>See results fast</h3>
-            <p>Same-day options for many treatments. Some patients walk in and walk out with a new smile in hours.</p>
-          </div>
-          <div class="feature-item">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="10" y="8" width="20" height="24" rx="3" stroke="#0F1C49" stroke-width="2"/><path d="M16 16h8M16 20h8M16 24h5" stroke="#2ABFC7" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </div>
-            <h3>Works with your schedule</h3>
-            <p>Open evenings and Saturdays. Walk-ins welcome. We make it easy to fit into your life.</p>
-          </div>
-          <div class="feature-item">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 8l-6 12h12L20 8z" stroke="#2ABFC7" stroke-width="2" fill="none"/><rect x="14" y="22" width="12" height="10" rx="2" stroke="#0F1C49" stroke-width="2"/></svg>
-            </div>
-            <h3>No financial surprises</h3>
-            <p>We accept 50+ insurance carriers and offer 0% financing. You'll know exactly what to expect before anything starts.</p>
-          </div>
-          <div class="feature-item">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="10" stroke="#0F1C49" stroke-width="2"/><path d="M15 20l3 3 7-7" stroke="#2ABFC7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3>Comfort is the priority</h3>
-            <p>Nervous? We get it. Sedation options for every comfort level, from light relaxation to full IV sedation.</p>
-          </div>
-        </div>
-        <div class="implants-photo">
-          <!-- Replace with actual photo -->
-          <div class="img-placeholder">Photo: dental lab with 3D printer</div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- =====================================================
-       PERMANENT LOOKS SO GOOD ON YOU
-  ===================================================== -->
-  <section class="permanent" aria-labelledby="permanent-heading">
-    <div class="container">
-      <h2 id="permanent-heading">Whatever you need, we're ready</h2>
-      <div class="permanent-grid">
-        <div class="implant-card">
-          <div class="implant-card-img">
-            <div class="img-placeholder">Photo: person smiling brightly</div>
-          </div>
-          <div>
-            <h3>A brighter smile</h3>
-            <p>Professional whitening that makes a noticeable difference — often in a single visit. Walk in feeling one way, walk out feeling completely different.</p>
-          </div>
-        </div>
-        <div class="implant-card">
-          <div class="implant-card-img">
-            <div class="img-placeholder">Photo: person with clear aligners</div>
-          </div>
-          <div>
-            <h3>A straighter smile</h3>
-            <p>Clear aligners that work quietly in the background. No one has to know — until they notice something's different about you.</p>
-          </div>
-        </div>
-        <div class="implant-card">
-          <div class="implant-card-img">
-            <div class="img-placeholder">Photo: person laughing confidently</div>
-          </div>
-          <div>
-            <h3>A complete smile</h3>
-            <p>Missing teeth don't have to hold you back. Custom implants that look and feel like your own — placed by specialists with 30+ years of experience.</p>
-          </div>
-        </div>
-        <div class="implant-card">
-          <div class="implant-card-img">
-            <div class="img-placeholder">Photo: person enjoying a meal</div>
-          </div>
-          <div>
-            <h3>A fresh start</h3>
-            <p>If you've been dealing with dentures that slip, teeth that hurt, or a smile that's held you back — this is your moment to change that.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =====================================================
-       NOTHING SHOULD STOP YOU (Financing)
-  ===================================================== -->
-  <section class="afford" aria-labelledby="afford-heading">
-    <div class="afford-grid">
-      <div class="afford-content">
-        <h2 id="afford-heading">Cost shouldn't be the thing that stops you</h2>
-        <p class="afford-sub">If money's been the reason you've been waiting, let's fix that first.</p>
-        <div class="afford-feature">
-          <h3>We work with your insurance</h3>
-          <p>In-network with 50+ carriers. We'll help you get the most out of your benefits — we handle the details.</p>
-        </div>
-        <div class="afford-feature">
-          <h3>0% financing, 95% approval</h3>
-          <p>Flexible monthly plans with no money down. You don't need perfect credit to get started.</p>
-        </div>
-        <div class="afford-feature">
-          <h3>No surprise fees</h3>
-          <p>We'll tell you exactly what to expect up front. No hidden costs, no awkward conversations later.</p>
-        </div>
-        <div class="afford-feature">
-          <h3>Free second opinion</h3>
-          <p>Already talked to another dentist? Bring in your plan. We'll make sure you're getting the best option for you.</p>
-        </div>
-        <a href="#locations" class="btn-solid-navy">Let's figure it out together</a>
-      </div>
-      <div class="afford-img">
-        <!-- Replace with actual photo -->
-        <div class="img-placeholder">Photo: older man smiling outdoors</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =====================================================
-       FINANCIAL PARTNERS
-  ===================================================== -->
+  <!-- ==========================================================
+       COMPONENT 7 — PARTNER LOGOS
+  ========================================================== -->
   <section class="partners" aria-label="Financial partners">
     <div class="container-narrow">
       <h2>We're proud to partner with the best</h2>
+      <p class="partners-sub">Flexible financing so nothing stands between you and a better smile.</p>
       <div class="partners-logos">
         <div class="partner-logo">CareCredit</div>
         <div class="partner-logo">ALPHAEON CREDIT</div>
@@ -1464,173 +1402,201 @@
     </div>
   </section>
 
-  <!-- =====================================================
-       KEEP CALM (Sedation)
-  ===================================================== -->
-  <section class="sedation" aria-labelledby="sedation-heading">
+
+  <!-- ==========================================================
+       COMPONENT 8 — REASSURANCE METRICS
+  ========================================================== -->
+  <section class="reassurance" aria-labelledby="reassurance-heading">
     <div class="container">
-      <h2 id="sedation-heading">Nervous? That's completely okay.</h2>
-      <div class="sedation-grid">
-        <div class="sedation-card">
-          <div class="sedation-icon" aria-hidden="true">
+      <h2 id="reassurance-heading">Keep calm and smile on</h2>
+      <div class="reassurance-grid">
+        <div class="reassurance-card">
+          <div class="reassurance-icon" aria-hidden="true">
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="18" r="10" stroke="#0F1C49" stroke-width="2"/><path d="M18 28v8a6 6 0 0012 0v-8" stroke="#2ABFC7" stroke-width="2"/><circle cx="21" cy="16" r="1.5" fill="#0F1C49"/><circle cx="27" cy="16" r="1.5" fill="#0F1C49"/><path d="M20 21c1 2 6 2 8 0" stroke="#0F1C49" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
-          <h3>Just need to take the edge off</h3>
-          <p>Nitrous oxide keeps you calm and relaxed while you're fully awake. Drive yourself home after, no problem.</p>
+          <h3>2,000+</h3>
+          <p>Every journey started with one conversation</p>
         </div>
-        <div class="sedation-card">
-          <div class="sedation-icon" aria-hidden="true">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="18" y="8" width="12" height="20" rx="3" stroke="#0F1C49" stroke-width="2"/><path d="M24 28v12M20 40h8" stroke="#2ABFC7" stroke-width="2" stroke-linecap="round"/><rect x="21" y="14" width="6" height="4" rx="1" fill="#2ABFC7" opacity="0.3"/></svg>
+        <div class="reassurance-card">
+          <div class="reassurance-icon" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="10" y="8" width="28" height="32" rx="4" stroke="#0F1C49" stroke-width="2"/><path d="M18 20h12M18 26h8" stroke="#2ABFC7" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="14" r="2" fill="#2ABFC7"/></svg>
           </div>
-          <h3>Rather not remember any of it</h3>
-          <p>IV sedation lets you sleep through the whole thing. You'll wake up and it's done. Many patients say this is what finally got them in the door.</p>
+          <h3>Flexible Financing</h3>
+          <p>Options for every budget</p>
         </div>
-        <div class="sedation-card">
-          <div class="sedation-icon" aria-hidden="true">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="14" r="6" stroke="#0F1C49" stroke-width="2"/><path d="M14 38v-4a10 10 0 0120 0v4" stroke="#2ABFC7" stroke-width="2"/><rect x="20" y="8" width="8" height="2" rx="1" fill="#0F1C49"/></svg>
+        <div class="reassurance-card">
+          <div class="reassurance-icon" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="14" stroke="#0F1C49" stroke-width="2"/><path d="M16 24l5 5 10-10" stroke="#2ABFC7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <h3>You're in safe hands, always</h3>
-          <p>We have a board-certified anesthesiologist on site. Your safety and comfort aren't an afterthought — they're the whole point.</p>
+          <h3>100%</h3>
+          <p>Patients who'd recommend us to a friend</p>
         </div>
-      </div>
-      <div class="sedation-cta">
-        <a href="#locations" class="btn-outline-navy">Don't let nerves hold you back</a>
       </div>
     </div>
   </section>
 
-  <!-- =====================================================
-       CHANGE YOUR SMILE
-  ===================================================== -->
-  <section class="change-smile" aria-labelledby="change-heading">
-    <div class="change-smile-inner">
-      <div class="change-smile-content">
-        <h2 id="change-heading">Imagine how it feels</h2>
-        <div class="benefit-pills">
-          <span class="benefit-pill">Laughing without covering your mouth</span>
-          <span class="benefit-pill">Saying yes to every summer plan</span>
-          <span class="benefit-pill">Eating whatever you want again</span>
-          <span class="benefit-pill">Finally feeling like yourself when you smile</span>
-        </div>
-      </div>
-      <div class="change-smile-img">
-        <!-- Replace with actual photo -->
-        <div class="img-placeholder">Photo: woman biting into an apple</div>
-      </div>
-    </div>
-    <div class="change-smile-cta">
-      <a href="#locations" class="btn-solid-navy">Start now, feel it by summer</a>
-    </div>
-  </section>
 
-  <!-- =====================================================
-       VIDEOS
-  ===================================================== -->
-  <section class="videos" aria-labelledby="videos-heading">
+  <!-- ==========================================================
+       COMPONENT 9 — MID-PAGE CTA (Variant C default)
+  ========================================================== -->
+  <!--
+    VARIANT A headline: "Your smile is ready when you are."
+    VARIANT A body: "Don't let summer start before you do. One step is all it takes to feel better all season."
+    VARIANT A CTA: "Get Started Today"
+
+    VARIANT B headline: "This summer starts with your smile."
+    VARIANT B body: "Save on select services. Book a free consult and feel the difference all season long."
+    VARIANT B CTA: "Start with a Free Consult"
+    VARIANT B support: "Limited availability. Book your spot today."
+  -->
+  <section class="mid-cta" aria-labelledby="mid-cta-heading">
     <div class="container">
-      <h2 id="videos-heading">See why people keep coming back</h2>
-      <div class="videos-grid">
-        <div class="video-thumb">
-          <div class="img-placeholder">Video thumbnail 1</div>
-          <div class="video-play"><div class="video-play-btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="#0F1C49"><polygon points="6,3 17,10 6,17"/></svg></div></div>
+      <h2 id="mid-cta-heading">Start now. Everything changes.</h2>
+      <p>Whatever you've been putting off — this is the season to do something about it. We'll make it easy.</p>
+      <p class="mid-cta-support">Save on select services. Flexible options.</p>
+      <a href="#locations" class="btn-solid-navy">Book Your Free Consultation</a>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================
+       COMPONENT 10 — SOCIAL PROOF GALLERY
+  ========================================================== -->
+  <section class="social-proof" aria-labelledby="social-proof-heading">
+    <div class="container">
+      <h2 id="social-proof-heading">See why we have everyone smiling</h2>
+      <p class="social-proof-sub">Real patients. Real moments. Real results.</p>
+      <div class="social-proof-grid">
+        <div class="social-proof-img">
+          <div class="img-placeholder">Patient photo 1</div>
         </div>
-        <div class="video-thumb">
-          <div class="img-placeholder">Video thumbnail 2</div>
-          <div class="video-play"><div class="video-play-btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="#0F1C49"><polygon points="6,3 17,10 6,17"/></svg></div></div>
+        <div class="social-proof-img">
+          <div class="img-placeholder">Patient photo 2</div>
         </div>
-        <div class="video-thumb">
-          <div class="img-placeholder">Video thumbnail 3</div>
-          <div class="video-play"><div class="video-play-btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="#0F1C49"><polygon points="6,3 17,10 6,17"/></svg></div></div>
+        <div class="social-proof-img">
+          <div class="img-placeholder">Patient photo 3</div>
+        </div>
+        <div class="social-proof-img">
+          <div class="img-placeholder">Patient photo 4</div>
+        </div>
+        <div class="social-proof-img">
+          <div class="img-placeholder">Patient photo 5</div>
+        </div>
+        <div class="social-proof-img">
+          <div class="img-placeholder">Patient photo 6</div>
+        </div>
+        <div class="social-proof-img">
+          <div class="img-placeholder">Patient photo 7</div>
+        </div>
+        <div class="social-proof-img">
+          <div class="img-placeholder">Patient photo 8</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- =====================================================
-       TESTIMONIALS
-  ===================================================== -->
+
+  <!-- ==========================================================
+       COMPONENT 11 — TESTIMONIALS
+  ========================================================== -->
   <section class="testimonials" aria-labelledby="testimonials-heading">
     <div class="container">
-      <h2 id="testimonials-heading">They started where you are right now</h2>
+      <h2 id="testimonials-heading">Real patients. Real results.</h2>
       <div class="testimonials-grid">
         <div class="testimonial-card">
           <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"I'd been thinking about it for years and kept putting it off. Finally walked in for the free consult and honestly? I wish I'd done it so much sooner. The whole team made it easy."</p>
-          <div class="t-author">David R.</div>
+          <p>"I came in for something simple and left feeling great. I'd been putting it off for months — I wish I hadn't."</p>
+          <div class="t-author">Amanda R.</div>
         </div>
         <div class="testimonial-card">
           <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"I was nervous about the cost and the process. They walked me through everything, figured out my insurance, and I left feeling like I actually had a plan. No pressure at all."</p>
+          <p>"I kept saying I'd do something about my teeth 'eventually.' I finally came in and I can't believe I waited so long. I smile differently now."</p>
+          <div class="t-author">Mark T.</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"It was a big decision and I was nervous. The team walked me through everything. Starting was the hardest part — and it wasn't even that hard."</p>
           <div class="t-author">Patricia M.</div>
-        </div>
-        <div class="testimonial-card">
-          <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"I just wanted my smile to feel like mine again. They listened, didn't try to upsell me, and the results were better than I expected. I actually smile in photos now."</p>
-          <div class="t-author">James T.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- =====================================================
-       FAQs
-  ===================================================== -->
+
+  <!-- ==========================================================
+       COMPONENT 12 — FAQ
+  ========================================================== -->
   <section class="faqs" aria-labelledby="faqs-heading">
     <div class="container">
       <div class="faqs-grid">
         <div class="faqs-intro">
-          <h2 id="faqs-heading">You're probably wondering...</h2>
-          <p>Totally fair. Here's what most people ask before they come in.</p>
+          <h2 id="faqs-heading">Don't worry, we've got all your questions covered</h2>
         </div>
         <div class="faq-list">
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               <span class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="2" x2="6" y2="10" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="2" y1="6" x2="10" y2="6" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></span>
-              I don't know exactly what I need. Is that okay?
+              How do I know which service is right for me?
             </button>
-            <div class="faq-answer"><div class="faq-answer-inner">Absolutely. Most people don't — that's exactly what the free consultation is for. Just come in, tell us what's been on your mind, and we'll figure out the right path together. No pressure, no commitment.</div></div>
+            <div class="faq-answer"><div class="faq-answer-inner">That's exactly what the free consult is for. You don't need to know anything before you come in — just bring your questions.</div></div>
           </div>
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               <span class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="2" x2="6" y2="10" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="2" y1="6" x2="10" y2="6" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></span>
-              Is there still time to see results before summer?
+              What if I'm nervous about coming in?
             </button>
-            <div class="faq-answer"><div class="faq-answer-inner">For many treatments, yes. Whitening can happen in a single visit. Some implant and denture cases are completed same-day with our on-site lab. Invisalign takes longer but you'll see progress quickly. The sooner you start, the more options you have.</div></div>
+            <div class="faq-answer"><div class="faq-answer-inner">We hear this a lot. Our team is here to make you feel comfortable from the moment you walk in. No rush, no pressure.</div></div>
           </div>
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               <span class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="2" x2="6" y2="10" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="2" y1="6" x2="10" y2="6" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></span>
-              What if I'm nervous about dental work?
+              How much does this cost?
             </button>
-            <div class="faq-answer"><div class="faq-answer-inner">You're not alone — a lot of our patients felt the same way before coming in. We offer nitrous oxide, IV sedation, and even have a board-certified anesthesiologist on site. Whatever your comfort level, we'll meet you there.</div></div>
+            <div class="faq-answer"><div class="faq-answer-inner">It depends on what you're looking for. The consult is free and we'll walk you through realistic options and flexible payment plans.</div></div>
           </div>
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               <span class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="2" x2="6" y2="10" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="2" y1="6" x2="10" y2="6" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></span>
-              How much is this going to cost me?
+              How long will it take to see results?
             </button>
-            <div class="faq-answer"><div class="faq-answer-inner">It depends on what you need, but we'll be upfront about everything. We're in-network with 50+ insurance carriers and offer 0% financing with a 95% approval rate. The free consultation includes a full cost breakdown — no surprises, no fine print.</div></div>
+            <div class="faq-answer"><div class="faq-answer-inner">A whitening treatment can be done in one visit. Other services take longer — but many changes that feel big start with a single appointment.</div></div>
           </div>
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               <span class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="2" x2="6" y2="10" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="2" y1="6" x2="10" y2="6" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></span>
-              What happens at the free consultation?
+              Do you accept insurance?
             </button>
-            <div class="faq-answer"><div class="faq-answer-inner">You tell us what's been on your mind. We do complimentary 3D scans, take a look at your options together, walk through insurance and financing, and you leave with a clear plan. The whole thing is relaxed, honest, and completely free. No obligation to do anything.</div></div>
+            <div class="faq-answer"><div class="faq-answer-inner">We work with most major insurance plans and offer flexible financing. Ask us when you call or book online.</div></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- =====================================================
-       LOCATIONS — Let's do this!
-  ===================================================== -->
-  <section class="locations" id="locations" aria-labelledby="locations-heading">
-    <h2 id="locations-heading">Ready? Let's go.</h2>
-    <p>Book your free consultation. Walk in, talk it through, and leave with a plan that feels right. No pressure, no obligation.</p>
-    <div class="locations-grid">
 
+  <!-- ==========================================================
+       COMPONENT 13 — FINAL CTA + LOCATION (Variant C default)
+  ========================================================== -->
+  <!--
+    VARIANT A headline: "This is the step you've been waiting to take."
+    VARIANT A body: "Get started today and feel the difference all summer long."
+    VARIANT A CTA: "Get Started Today"
+    VARIANT A sub: "Or call us at [phone number] — happy to answer any questions."
+
+    VARIANT B headline: "Summer is almost here. Don't let your smile wait any longer."
+    VARIANT B body: "Book your free consult and start the season feeling great."
+    VARIANT B CTA: "Start with a Free Consult"
+    VARIANT B sub: "Or call us at [phone number]."
+  -->
+  <section class="locations" id="locations" aria-labelledby="locations-heading">
+    <h2 class="locations-headline" id="locations-heading">Start now. Smile all summer.</h2>
+    <p>Whatever you've been thinking about — big or small — we're here to help you take that first step.</p>
+    <div class="locations-cta-row">
+      <a href="tel:+15165656565" class="btn-cta-teal">Book Your Free Consultation</a>
+    </div>
+    <p class="locations-sub">Save on select services. Flexible options. Call (516) 565-6565 with questions.</p>
+
+    <div class="locations-grid">
       <div class="location-card">
         <div class="location-img">
           <!-- Replace with actual office photo -->
@@ -1661,18 +1627,18 @@
             Levittown, NY 11756
           </div>
           <div class="location-buttons">
-            <a href="tel:+15165656565" class="btn-call">Call: (516) 865-6565</a>
+            <a href="tel:+15168656565" class="btn-call">Call: (516) 865-6565</a>
             <a href="sms:+15168651035" class="btn-text">Text: (516) 865-1035</a>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- =====================================================
-       FOOTER
-  ===================================================== -->
+
+  <!-- ==========================================================
+       COMPONENT 14 — FOOTER
+  ========================================================== -->
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
