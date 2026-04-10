@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Start Now, Smile All Summer | Island Dental Associates</title>
-  <meta name="description" content="If you've been thinking about making a change, this is the time. Book a free consultation at Island Dental Associates and smile all summer long.">
+  <title>Start Today | Island Dental Associates</title>
+  <meta name="description" content="Book a free consultation at Island Dental Associates. Comprehensive dental services — implants, Invisalign, whitening, dentures and more — all under one roof.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
@@ -49,7 +49,6 @@
     .container { max-width: 1296px; margin: 0 auto; padding: 0 72px; }
     .container-narrow { max-width: 1100px; margin: 0 auto; padding: 0 72px; }
 
-    /* Placeholder image helper */
     .img-placeholder {
       background: linear-gradient(135deg, #d1d9e6 0%, #e8ecf1 100%);
       display: flex;
@@ -60,6 +59,12 @@
       font-weight: 600;
       text-align: center;
       overflow: hidden;
+    }
+
+    .photo-cover {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     /* ==========================================================
@@ -118,7 +123,7 @@
       height: 48px;
       position: relative;
     }
-    .logo-icon svg { width: 48px; height: 48px; }
+    .logo-icon img { width: 48px; height: 48px; object-fit: contain; }
     .header-logo-text {
       font-family: 'Nunito Sans', sans-serif;
       font-size: 24px;
@@ -126,9 +131,7 @@
       color: var(--navy);
       line-height: 1.1;
     }
-    .header-logo-text strong {
-      font-weight: 700;
-    }
+    .header-logo-text strong { font-weight: 700; }
     .header-logo-sub {
       font-family: 'Nunito Sans', sans-serif;
       font-size: 10px;
@@ -174,7 +177,6 @@
       transition: background 0.2s;
     }
     .btn-book:hover { background: #22a8b0; }
-    .btn-book svg { fill: white; }
 
     /* ==========================================================
        HERO
@@ -194,12 +196,11 @@
       inset: 0;
       z-index: 0;
     }
-    .hero-bg .img-placeholder {
+    .hero-bg img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
       border-radius: var(--radius);
-      background: linear-gradient(135deg, #1a2a4a 0%, #2d4a6a 50%, #a0b5c8 100%);
-      font-size: 14px;
     }
     .hero-overlay {
       position: absolute;
@@ -237,14 +238,8 @@
       font-weight: 400;
       color: rgba(255,255,255,0.88);
       line-height: 1.6;
-      margin-bottom: 16px;
+      margin-bottom: 36px;
       max-width: 440px;
-    }
-    .hero-support {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--yellow);
-      margin-bottom: 32px;
     }
     .hero-buttons {
       display: flex;
@@ -273,7 +268,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: transparent;
+      background: rgba(255,255,255,0.85);
       color: var(--navy);
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
@@ -283,7 +278,6 @@
       border: 2px solid rgba(255,255,255,0.5);
       cursor: pointer;
       text-decoration: none;
-      background: rgba(255,255,255,0.85);
       transition: background 0.2s;
     }
     .btn-outline-white:hover { background: rgba(255,255,255,1); }
@@ -386,10 +380,10 @@
       aspect-ratio: 4/3;
       overflow: hidden;
     }
-    .outcome-card-img .img-placeholder {
+    .outcome-card-img img {
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, #f0e6e0 0%, #f5ede8 100%);
+      object-fit: cover;
     }
     .outcome-card-body {
       padding: 20px;
@@ -408,79 +402,136 @@
     }
 
     /* ==========================================================
-       WHY NOW (urgency)
+       ON-SITE LAB
     ========================================================== */
-    .why-now {
-      padding: 0;
-      background: var(--off-white);
+    .lab {
+      padding: 80px 0;
+      background: var(--white);
     }
-    .why-now-inner {
+    .lab-header {
+      margin-bottom: 48px;
+    }
+    .lab-header h2 {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 48px;
+      font-weight: 500;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .lab-header p {
+      font-size: 17px;
+      color: var(--muted);
+      line-height: 1.6;
+      max-width: 560px;
+    }
+    .lab-photo {
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 56px;
+      max-height: 520px;
+    }
+    .lab-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .lab-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      max-width: 1440px;
-      margin: 0 auto;
-      min-height: 560px;
+      gap: 40px 64px;
     }
-    .why-now-content {
-      padding: 72px 72px;
+    .lab-feature h3 {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .lab-feature p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* ==========================================================
+       FREE CONSULT (Why Now)
+    ========================================================== */
+    .free-consult {
+      background: var(--navy);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1296px;
+      margin: 0 auto;
+    }
+    .free-consult-content {
+      padding: 56px 56px;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
-    .why-now-eyebrow {
+    .free-consult-eyebrow {
       font-family: 'Montserrat', sans-serif;
       font-weight: 800;
-      font-size: 12px;
+      font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: var(--teal);
+      color: var(--yellow);
       margin-bottom: 16px;
     }
-    .why-now-content h2 {
+    .free-consult-content h2 {
       font-family: 'Nunito Sans', sans-serif;
-      font-size: 44px;
+      font-size: 40px;
       font-weight: 500;
-      color: var(--navy);
-      line-height: 1.12;
-      margin-bottom: 24px;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 10px;
     }
-    .why-now-content p {
-      font-size: 17px;
-      color: var(--muted);
-      line-height: 1.7;
-      margin-bottom: 20px;
-      max-width: 440px;
+    .free-consult-sub {
+      font-size: 18px;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 28px;
     }
-    .why-now-bullets {
-      list-style: none;
+    .free-consult-list {
+      list-style: disc;
+      padding-left: 20px;
       margin-bottom: 32px;
     }
-    .why-now-bullets li {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--navy);
-      padding: 6px 0;
-      padding-left: 24px;
-      position: relative;
+    .free-consult-list li {
+      font-size: 16px;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 12px;
+      list-style: disc;
     }
-    .why-now-bullets li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 12px;
-      width: 8px;
-      height: 8px;
-      background: var(--teal);
-      border-radius: 50%;
+    .free-consult-img {
+      min-height: 400px;
+      overflow: hidden;
     }
-    .why-now-img {
-      min-height: 500px;
-    }
-    .why-now-img .img-placeholder {
+    .free-consult-img img {
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, #d4c0b0 0%, #e8ddd4 100%);
+      object-fit: cover;
     }
+    .btn-amber {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--yellow);
+      color: var(--navy);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 16px 32px;
+      border-radius: 40px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      align-self: flex-start;
+      transition: background 0.2s;
+    }
+    .btn-amber:hover { background: #e5ad00; }
 
     /* ==========================================================
        PROCESS STEPS
@@ -539,61 +590,40 @@
        OBJECTION REMOVAL
     ========================================================== */
     .objection {
-      background: var(--navy);
-      border-radius: var(--radius);
-      overflow: hidden;
+      background: var(--off-white);
+      padding: 80px 0;
+    }
+    .objection-inner {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      max-width: 1296px;
-      margin: 0 auto 0;
-    }
-    .objection-content {
-      padding: 56px 56px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      gap: 64px;
+      align-items: center;
     }
     .objection-content h2 {
       font-family: 'Nunito Sans', sans-serif;
-      font-size: 40px;
+      font-size: 44px;
       font-weight: 500;
-      color: var(--white);
-      line-height: 1.15;
+      color: var(--navy);
+      line-height: 1.12;
       margin-bottom: 24px;
     }
     .objection-content p {
       font-size: 17px;
-      color: rgba(255,255,255,0.82);
+      color: var(--muted);
       line-height: 1.7;
       margin-bottom: 32px;
       max-width: 440px;
     }
     .objection-img {
-      min-height: 400px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      height: 480px;
     }
-    .objection-img .img-placeholder {
+    .objection-img img {
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, #c8d6e5 0%, #dfe6ed 100%);
+      object-fit: cover;
     }
-    .btn-amber {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--yellow);
-      color: var(--navy);
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      font-size: 14px;
-      padding: 16px 32px;
-      border-radius: 40px;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      align-self: flex-start;
-      transition: background 0.2s;
-    }
-    .btn-amber:hover { background: #e5ad00; }
 
     /* ==========================================================
        PARTNER LOGOS
@@ -697,14 +727,8 @@
       font-size: 18px;
       color: rgba(255,255,255,0.9);
       max-width: 540px;
-      margin: 0 auto 12px;
+      margin: 0 auto 32px;
       line-height: 1.6;
-    }
-    .mid-cta-support {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--yellow);
-      margin-bottom: 32px;
     }
     .btn-solid-navy {
       display: inline-flex;
@@ -755,10 +779,10 @@
       overflow: hidden;
       aspect-ratio: 1;
     }
-    .social-proof-img .img-placeholder {
+    .social-proof-img img {
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, #d4c0b0 0%, #e8ddd4 100%);
+      object-fit: cover;
     }
 
     /* ==========================================================
@@ -834,9 +858,7 @@
       line-height: 1.65;
     }
     .faq-list { border-top: 1px solid var(--border); }
-    .faq-item {
-      border-bottom: 1px solid var(--border);
-    }
+    .faq-item { border-bottom: 1px solid var(--border); }
     .faq-question {
       display: flex;
       align-items: center;
@@ -922,11 +944,12 @@
     }
     .location-img {
       height: 240px;
+      overflow: hidden;
     }
-    .location-img .img-placeholder {
+    .location-img img {
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, #b8c9db 0%, #d4dde8 100%);
+      object-fit: cover;
     }
     .location-info {
       padding: 28px 24px 32px;
@@ -1014,13 +1037,6 @@
       text-transform: uppercase;
       color: var(--teal);
     }
-    .footer-hours h4 {
-      font-family: 'Nunito Sans', sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 12px;
-    }
     .footer-hours-list {
       font-size: 14px;
       color: rgba(255,255,255,0.65);
@@ -1085,19 +1101,20 @@
       .container, .container-narrow { padding: 0 32px; }
       .hero-content { padding: 60px 40px; }
       .hero h1 { font-size: 42px; }
-      .outcome h2, .why-now-content h2, .process h2,
-      .reassurance h2, .mid-cta h2, .social-proof h2,
-      .testimonials h2, .locations-headline { font-size: 36px; }
+      .outcome h2, .lab-header h2, .process h2,
+      .objection-content h2, .reassurance h2, .mid-cta h2,
+      .social-proof h2, .testimonials h2, .locations-headline { font-size: 36px; }
       .stat-number { font-size: 38px; }
-      .objection { margin-left: 32px; margin-right: 32px; }
+      .free-consult { margin-left: 32px; margin-right: 32px; }
       .outcome-grid { grid-template-columns: repeat(2, 1fr); }
       .social-proof-grid { grid-template-columns: repeat(3, 1fr); }
+      .lab-grid { gap: 32px 40px; }
     }
 
     @media (max-width: 768px) {
       .container, .container-narrow { padding: 0 20px; }
       .hero { margin: 0; border-radius: 0; min-height: 500px; }
-      .hero-bg .img-placeholder { border-radius: 0; }
+      .hero-bg img { border-radius: 0; }
       .hero-overlay { border-radius: 0; }
       .hero-content { padding: 48px 24px; }
       .hero h1 { font-size: 34px; }
@@ -1112,17 +1129,19 @@
 
       .outcome-grid { grid-template-columns: 1fr; }
 
-      .why-now-inner { grid-template-columns: 1fr; }
-      .why-now-content { padding: 48px 24px; }
-      .why-now-img { min-height: 320px; }
+      .lab-grid { grid-template-columns: 1fr; }
 
-      .process-grid { grid-template-columns: 1fr; gap: 48px; }
-
-      .objection {
+      .free-consult {
         grid-template-columns: 1fr;
         margin-left: 20px; margin-right: 20px;
       }
-      .objection-img { min-height: 280px; }
+      .free-consult-img { min-height: 280px; }
+      .free-consult-content { padding: 40px 28px; }
+
+      .process-grid { grid-template-columns: 1fr; gap: 48px; }
+
+      .objection-inner { grid-template-columns: 1fr; }
+      .objection-img { height: 320px; }
 
       .reassurance-grid { grid-template-columns: 1fr; }
 
@@ -1147,7 +1166,7 @@
        TOP BANNER
   ===================================================== -->
   <div class="top-banner" id="topBanner">
-    <p>Save on select services. Book your free consultation today.</p>
+    <p>Your free consultation is the easiest first step. Book yours today.</p>
     <button class="top-banner-close" aria-label="Close banner" onclick="document.getElementById('topBanner').style.display='none'">&times;</button>
   </div>
 
@@ -1156,14 +1175,9 @@
   ===================================================== -->
   <header class="header">
     <div class="container">
-      <a href="#" class="header-logo" aria-label="Island Dental Associates home">
+      <a href="https://www.islanddentalassociates.com/" class="header-logo" aria-label="Island Dental Associates home">
         <div class="logo-icon">
-          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="24" cy="24" r="24" fill="#2ABFC7" opacity="0"/>
-            <path d="M10 28c4-6 8-4 12-8s4-10 8-10 6 4 8 10" stroke="#2ABFC7" stroke-width="3" stroke-linecap="round" fill="none"/>
-            <path d="M18 18c1-4 4-7 6-7s4 2 5 5" stroke="#FFC107" stroke-width="2" stroke-linecap="round" fill="none"/>
-            <ellipse cx="24" cy="16" rx="3" ry="5" fill="#2ABFC7" opacity="0.2"/>
-          </svg>
+          <img src="https://www.islanddentalassociates.com/wp-content/uploads/2024/11/cropped-cropped-logo-ida-lp.png" alt="Island Dental Associates logo">
         </div>
         <div>
           <div class="header-logo-text"><strong>Island</strong>Dental</div>
@@ -1198,15 +1212,13 @@
   -->
   <section class="hero" aria-labelledby="hero-heading">
     <div class="hero-bg">
-      <!-- Replace with actual hero photo matching Variant C Meta ad -->
-      <div class="img-placeholder">Hero photo: confident smile, summer setting</div>
+      <img src="https://www.islanddentalassociates.com/wp-content/uploads/2024/09/perfect_smile_autumn.jpg" alt="Confident woman smiling">
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <div class="hero-eyebrow">Spring &rarr; Summer 2026</div>
-      <h1 id="hero-heading">Start Now. Smile All Summer.</h1>
+      <div class="hero-eyebrow">Island Dental Associates</div>
+      <h1 id="hero-heading">Start Today. Love Your Smile.</h1>
       <p class="hero-subtitle">If you've been thinking about making a change, this is the time. Something small or something bigger — we'll make it simple.</p>
-      <p class="hero-support">Save on select services. Flexible options.</p>
       <div class="hero-buttons">
         <a href="#locations" class="btn-cta-teal">Book Your Free Consultation</a>
       </div>
@@ -1274,8 +1286,7 @@
       <div class="outcome-grid">
         <div class="outcome-card">
           <div class="outcome-card-img">
-            <!-- Replace with actual before/after or result photo -->
-            <div class="img-placeholder">Photo: whitening result</div>
+            <img src="https://www.islanddentalassociates.com/wp-content/uploads/2024/09/teeth_whitening.jpg" alt="Professional teeth whitening result">
           </div>
           <div class="outcome-card-body">
             <h3>Whitening</h3>
@@ -1284,7 +1295,7 @@
         </div>
         <div class="outcome-card">
           <div class="outcome-card-img">
-            <div class="img-placeholder">Photo: Invisalign result</div>
+            <img src="https://www.islanddentalassociates.com/wp-content/uploads/2024/12/Invisalign-Square.png" alt="Invisalign clear aligners">
           </div>
           <div class="outcome-card-body">
             <h3>Invisalign</h3>
@@ -1293,7 +1304,7 @@
         </div>
         <div class="outcome-card">
           <div class="outcome-card-img">
-            <div class="img-placeholder">Photo: implant result</div>
+            <img src="https://www.islanddentalassociates.com/wp-content/uploads/2024/10/ImplantFAQ-1024x576.png" alt="Dental implant">
           </div>
           <div class="outcome-card-body">
             <h3>Implants</h3>
@@ -1302,7 +1313,7 @@
         </div>
         <div class="outcome-card">
           <div class="outcome-card-img">
-            <div class="img-placeholder">Photo: full restoration result</div>
+            <img src="https://www.islanddentalassociates.com/wp-content/uploads/2025/02/di-featured-case2.png" alt="Full smile restoration">
           </div>
           <div class="outcome-card-body">
             <h3>Full Restoration</h3>
@@ -1315,25 +1326,69 @@
 
 
   <!-- ==========================================================
-       COMPONENT 4 — WHY NOW? (Urgency)
+       ON-SITE DENTAL LAB
   ========================================================== -->
-  <section class="why-now" aria-labelledby="why-now-heading">
-    <div class="why-now-inner">
-      <div class="why-now-content">
-        <div class="why-now-eyebrow">Why Now?</div>
-        <h2 id="why-now-heading">Your smile, this summer — not next year.</h2>
-        <p>May is when the calendar fills up — trips, events, photos, social time. If you've been meaning to do something about your smile, this is the moment. Not someday. Now.</p>
-        <ul class="why-now-bullets">
-          <li>You've been thinking about it. Make this the summer you do it.</li>
-          <li>One appointment can change how you walk into the season.</li>
-          <li>Save on select services. Start before summer.</li>
-        </ul>
-        <a href="#locations" class="btn-cta-teal">Book Your Free Consultation</a>
+  <section class="lab" aria-labelledby="lab-heading">
+    <div class="container">
+      <div class="lab-header">
+        <h2 id="lab-heading">Full state-of-the-art dental lab on premise</h2>
+        <p>Our expert on-site lab gives you the highest quality teeth in the shortest time for the lowest price.</p>
       </div>
-      <div class="why-now-img">
-        <!-- Replace with lifestyle photo -->
-        <div class="img-placeholder">Photo: person smiling outdoors in summer</div>
+      <div class="lab-photo">
+        <img src="https://www.islanddentalassociates.com/wp-content/uploads/2024/07/dental-technician-examining-model-of-teeth-on-comp-2023-11-27-05-12-43-utc-1024x683.jpg" alt="Dental technician working in the on-site lab">
       </div>
+      <div class="lab-grid">
+        <div class="lab-feature">
+          <h3>Fast turnaround</h3>
+          <p>No external shipping and production delays means you'll get your crowns, bridges and dentures in less time.</p>
+        </div>
+        <div class="lab-feature">
+          <h3>Better quality control</h3>
+          <p>Direct oversight by our expert team means each restoration is crafted to the highest standards — for the best fit with lasting wear.</p>
+        </div>
+        <div class="lab-feature">
+          <h3>Reduced cost</h3>
+          <p>Eliminating external labs makes high-quality dental care less expensive — savings that are passed on to you.</p>
+        </div>
+        <div class="lab-feature">
+          <h3>Immediate repairs &amp; adjustments</h3>
+          <p>We'll make repairs and adjustments on the spot to minimize discomfort and downtime for you.</p>
+        </div>
+        <div class="lab-feature">
+          <h3>Precision customization</h3>
+          <p>Enjoy real-time adjustments and restorations that are highly personalized to your unique needs and preferences.</p>
+        </div>
+        <div class="lab-feature">
+          <h3>Convenient appointments</h3>
+          <p>Spend less time in the chair with multiple visits consolidated into fewer appointments for the ultimate convenience.</p>
+        </div>
+        <div class="lab-feature">
+          <h3>Better communication</h3>
+          <p>Your treatment process is smoother thanks to seamless communication between your dentist and on-site lab technicians.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================
+       COMPONENT 4 — FREE CONSULT OFFER (replaces Why Now?)
+  ========================================================== -->
+  <section class="free-consult" aria-labelledby="free-consult-heading">
+    <div class="free-consult-content">
+      <div class="free-consult-eyebrow">$500 Value</div>
+      <h2 id="free-consult-heading">Book a FREE consultation</h2>
+      <p class="free-consult-sub">Flexible hours make it easy</p>
+      <ul class="free-consult-list">
+        <li>Complimentary CT scan</li>
+        <li>Customized treatment plan with affordable options</li>
+        <li>Walkthrough of your insurance benefits</li>
+        <li>All your questions answered</li>
+      </ul>
+      <a href="#locations" class="btn-amber">Get started today</a>
+    </div>
+    <div class="free-consult-img">
+      <img src="https://www.islanddentalassociates.com/wp-content/uploads/2024/07/gallery2-1024x685.png" alt="Friendly front desk staff greeting a patient">
     </div>
   </section>
 
@@ -1358,7 +1413,7 @@
         <div class="process-step">
           <div class="process-number">3</div>
           <h3>Start Smiling</h3>
-          <p>Whether it's one appointment or a longer journey, we make every step comfortable. And you'll feel the difference before summer is over.</p>
+          <p>Whether it's one appointment or a longer journey, we make every step comfortable. And you'll feel the difference sooner than you think.</p>
         </div>
       </div>
     </div>
@@ -1366,21 +1421,20 @@
 
 
   <!-- ==========================================================
-       COMPONENT 6 — OBJECTION REMOVAL + CTA (Variant C CTA)
+       COMPONENT 6 — OBJECTION REMOVAL + CTA
   ========================================================== -->
-  <!--
-    VARIANT A CTA: "Get Started Today"
-    VARIANT B CTA: "Start with a Free Consult"
-  -->
   <section class="objection" aria-labelledby="objection-heading">
-    <div class="objection-content">
-      <h2 id="objection-heading">Nothing should stop you from a smile you love.</h2>
-      <p>Not sure which service is right for you? That's exactly what the consult is for. Worried about cost? We offer flexible options and work with most insurance plans. Nervous about coming in? Our team has heard it all — and we're here to make it easy.</p>
-      <a href="#locations" class="btn-amber">Book Your Free Consultation</a>
-    </div>
-    <div class="objection-img">
-      <!-- Replace with actual photo -->
-      <div class="img-placeholder">Photo: patient smiling in dental chair</div>
+    <div class="container">
+      <div class="objection-inner">
+        <div class="objection-content">
+          <h2 id="objection-heading">Nothing should stop you from a smile you love.</h2>
+          <p>Not sure which service is right for you? That's exactly what the consult is for. Worried about cost? We offer flexible options and work with most insurance plans. Nervous about coming in? Our team has heard it all — and we're here to make it easy.</p>
+          <a href="#locations" class="btn-cta-teal">Book Your Free Consultation</a>
+        </div>
+        <div class="objection-img">
+          <img src="https://www.islanddentalassociates.com/wp-content/uploads/2024/07/gallery6.png" alt="Modern treatment room at Island Dental">
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1441,19 +1495,17 @@
   ========================================================== -->
   <!--
     VARIANT A headline: "Your smile is ready when you are."
-    VARIANT A body: "Don't let summer start before you do. One step is all it takes to feel better all season."
+    VARIANT A body: "Don't let another day go by. One step is all it takes to feel better about your smile."
     VARIANT A CTA: "Get Started Today"
 
-    VARIANT B headline: "This summer starts with your smile."
-    VARIANT B body: "Save on select services. Book a free consult and feel the difference all season long."
+    VARIANT B headline: "This starts with your smile."
+    VARIANT B body: "Book a free consult and feel the difference."
     VARIANT B CTA: "Start with a Free Consult"
-    VARIANT B support: "Limited availability. Book your spot today."
   -->
   <section class="mid-cta" aria-labelledby="mid-cta-heading">
     <div class="container">
-      <h2 id="mid-cta-heading">Start now. Everything changes.</h2>
-      <p>Whatever you've been putting off — this is the season to do something about it. We'll make it easy.</p>
-      <p class="mid-cta-support">Save on select services. Flexible options.</p>
+      <h2 id="mid-cta-heading">Start today. Everything changes.</h2>
+      <p>Whatever you've been putting off — this is the moment to do something about it. We'll make it easy.</p>
       <a href="#locations" class="btn-solid-navy">Book Your Free Consultation</a>
     </div>
   </section>
@@ -1468,28 +1520,28 @@
       <p class="social-proof-sub">Real patients. Real moments. Real results.</p>
       <div class="social-proof-grid">
         <div class="social-proof-img">
-          <div class="img-placeholder">Patient photo 1</div>
+          <img src="https://www.islanddentalassociates.com/wp-content/uploads/2024/07/gallery1.png" alt="Island Dental Franklin Square office">
         </div>
         <div class="social-proof-img">
-          <div class="img-placeholder">Patient photo 2</div>
+          <img src="https://www.islanddentalassociates.com/wp-content/uploads/2024/07/gallery3.png" alt="Island Dental office foyer">
         </div>
         <div class="social-proof-img">
-          <div class="img-placeholder">Patient photo 3</div>
+          <img src="https://www.islanddentalassociates.com/wp-content/uploads/2024/07/gallery7.png" alt="Comfortable waiting area">
         </div>
         <div class="social-proof-img">
-          <div class="img-placeholder">Patient photo 4</div>
+          <img src="https://www.islanddentalassociates.com/wp-content/uploads/2024/07/gallery4.png" alt="Island Dental office interior">
         </div>
         <div class="social-proof-img">
-          <div class="img-placeholder">Patient photo 5</div>
+          <img src="https://www.islanddentalassociates.com/wp-content/uploads/2025/02/meet-kenn3.jpg" alt="Patient smiling after treatment">
         </div>
         <div class="social-proof-img">
-          <div class="img-placeholder">Patient photo 6</div>
+          <img src="https://www.islanddentalassociates.com/wp-content/uploads/2024/11/meet-kate2.png" alt="Patient sharing their experience">
         </div>
         <div class="social-proof-img">
-          <div class="img-placeholder">Patient photo 7</div>
+          <img src="https://www.islanddentalassociates.com/wp-content/uploads/2025/02/meet-abasso5.jpg" alt="Happy patient after dental work">
         </div>
         <div class="social-proof-img">
-          <div class="img-placeholder">Patient photo 8</div>
+          <img src="https://www.islanddentalassociates.com/wp-content/uploads/2025/06/marvin-ss.jpg" alt="Patient testimonial">
         </div>
       </div>
     </div>
@@ -1579,28 +1631,27 @@
   ========================================================== -->
   <!--
     VARIANT A headline: "This is the step you've been waiting to take."
-    VARIANT A body: "Get started today and feel the difference all summer long."
+    VARIANT A body: "Get started today and feel the difference."
     VARIANT A CTA: "Get Started Today"
-    VARIANT A sub: "Or call us at [phone number] — happy to answer any questions."
+    VARIANT A sub: "Or call us at (516) 565-6565 — happy to answer any questions."
 
-    VARIANT B headline: "Summer is almost here. Don't let your smile wait any longer."
-    VARIANT B body: "Book your free consult and start the season feeling great."
+    VARIANT B headline: "Don't let your smile wait any longer."
+    VARIANT B body: "Book your free consult and start feeling great."
     VARIANT B CTA: "Start with a Free Consult"
-    VARIANT B sub: "Or call us at [phone number]."
+    VARIANT B sub: "Or call us at (516) 565-6565."
   -->
   <section class="locations" id="locations" aria-labelledby="locations-heading">
-    <h2 class="locations-headline" id="locations-heading">Start now. Smile all summer.</h2>
+    <h2 class="locations-headline" id="locations-heading">Start today. Love your smile.</h2>
     <p>Whatever you've been thinking about — big or small — we're here to help you take that first step.</p>
     <div class="locations-cta-row">
       <a href="tel:+15165656565" class="btn-cta-teal">Book Your Free Consultation</a>
     </div>
-    <p class="locations-sub">Save on select services. Flexible options. Call (516) 565-6565 with questions.</p>
+    <p class="locations-sub">Call (516) 565-6565 with questions. We're happy to help.</p>
 
     <div class="locations-grid">
       <div class="location-card">
         <div class="location-img">
-          <!-- Replace with actual office photo -->
-          <div class="img-placeholder">Photo: Franklin Square office exterior</div>
+          <img src="https://www.islanddentalassociates.com/wp-content/uploads/2024/07/gallery1.png" alt="Island Dental Franklin Square office">
         </div>
         <div class="location-info">
           <h3>Franklin Square</h3>
@@ -1617,8 +1668,7 @@
 
       <div class="location-card">
         <div class="location-img">
-          <!-- Replace with actual office photo -->
-          <div class="img-placeholder">Photo: Levittown office interior</div>
+          <img src="https://www.islanddentalassociates.com/wp-content/uploads/2024/07/gallery7.png" alt="Island Dental Levittown office">
         </div>
         <div class="location-info">
           <h3>Levittown</h3>
