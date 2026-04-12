@@ -4,7 +4,7 @@
     {
       "name": "islanddental-spring",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8788"],
+      "runtimeArgs": ["serve.py"],
       "port": 8788
     }
   ]

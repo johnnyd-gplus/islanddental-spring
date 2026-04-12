@@ -82,6 +82,8 @@
       font-weight: 700;
       color: var(--navy);
     }
+    .top-banner-link { color: var(--navy); text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 2px; }
+    .top-banner-link:hover { opacity: 0.75; }
     .top-banner-close {
       position: absolute;
       right: 24px;
@@ -101,7 +103,7 @@
     ========================================================== */
     .header {
       background: var(--white);
-      padding: 20px 0;
+      padding: 16px 0;
       border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
@@ -119,7 +121,7 @@
       text-decoration: none;
     }
     .logo-desktop { display: none; }
-    .logo-mobile { display: block; width: 160px; height: auto; }
+    .logo-mobile { display: block; width: 141px; height: auto; }
     .header-right {
       display: flex;
       align-items: center;
@@ -342,10 +344,108 @@
     }
 
     /* ==========================================================
+       OFFER BLOCK
+    ========================================================== */
+    .offer-block {
+      background: var(--navy);
+      overflow: hidden;
+    }
+    .offer-block-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 520px;
+      max-width: 1296px;
+      margin: 0 auto;
+    }
+    .offer-block-image {
+      position: relative;
+      overflow: hidden;
+      line-height: 0;
+      font-size: 0;
+    }
+    .offer-block-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+    .offer-block-content {
+      padding: 72px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .offer-eyebrow {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--teal);
+      background: rgba(42,191,199,0.15);
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+      align-self: flex-start;
+    }
+    .offer-headline {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 44px;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .offer-sub {
+      font-size: 18px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+    .offer-list {
+      list-style: none;
+      margin-bottom: 40px;
+    }
+    .offer-list li {
+      font-size: 16px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 4px;
+    }
+    .offer-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--teal);
+      font-weight: 700;
+    }
+    .btn-offer {
+      display: inline-block;
+      background: var(--teal);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      padding: 18px 40px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      align-self: flex-start;
+    }
+    .btn-offer:hover { background: #22a8b0; transform: translateY(-1px); }
+
+    /* ==========================================================
        OUTCOME SHOWCASE
     ========================================================== */
     .outcome {
-      padding: 80px 0 64px;
+      padding: 80px 0;
     }
     .outcome h2 {
       font-family: 'Nunito Sans', sans-serif;
@@ -457,7 +557,7 @@
        BEFORE & AFTER
     ========================================================== */
     .before-after {
-      padding: 80px 0;
+      padding: 80px 0 112px;
       background: var(--off-white);
     }
     .before-after-header {
@@ -630,7 +730,7 @@
       display: grid;
       grid-template-columns: 5fr 7fr;
       max-width: 1120px;
-      margin: 0 auto;
+      margin: 0 auto 80px;
     }
     .free-consult-content {
       padding: 56px 56px;
@@ -830,7 +930,7 @@
        REASSURANCE METRICS
     ========================================================== */
     .reassurance {
-      padding: 72px 0;
+      padding: 80px 0;
     }
     .reassurance h2 {
       font-family: 'Nunito Sans', sans-serif;
@@ -955,7 +1055,7 @@
        TESTIMONIALS
     ========================================================== */
     .testimonials {
-      padding: 64px 0 72px;
+      padding: 80px 0;
       background: var(--off-white);
     }
     .testimonials h2 {
@@ -965,6 +1065,7 @@
       color: var(--navy);
       line-height: 1.15;
       margin-bottom: 40px;
+      text-align: center;
     }
     .testimonials-grid {
       display: grid;
@@ -1001,7 +1102,7 @@
        FAQs
     ========================================================== */
     .faqs {
-      padding: 72px 0;
+      padding: 80px 0;
     }
     .faqs-grid {
       display: grid;
@@ -1414,6 +1515,16 @@
       .reasons-inner { grid-template-columns: 1fr; gap: 32px; }
       .reasons-img { height: 260px; }
       .reasons-content h2 { font-size: 30px; }
+      .offer-block-inner { grid-template-columns: 1fr; min-height: auto; }
+      .offer-block-inner { gap: 0; }
+      .offer-block-image { height: 320px; }
+      .offer-block-image img { object-position: 45% top; }
+      .offer-block-content { padding: 48px 24px; }
+      .offer-block-content { text-align: left; align-items: flex-start; }
+      .offer-list { text-align: left; align-self: stretch; }
+      .offer-headline { font-size: 30px; }
+      .offer-sub { font-size: 16px; }
+      .btn-offer { align-self: flex-start; }
 
       .footer-top {
         grid-template-columns: 1fr;
@@ -1456,7 +1567,7 @@
        TOP BANNER
   ===================================================== -->
   <div class="top-banner" id="topBanner">
-    <p>Book today and save on select services</p>
+    <p><a href="#" class="top-banner-link">Schedule your FREE consultation</a></p>
     <button class="top-banner-close" aria-label="Close banner" onclick="document.getElementById('topBanner').style.display='none'">&times;</button>
   </div>
 
@@ -1501,7 +1612,7 @@
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <div class="hero-eyebrow">COSMETIC DENTISTRY</div>
+      <div class="hero-eyebrow">FREE CONSULTATIONS</div>
       <h1 id="hero-heading">Get a summer-ready smile</h1>
       <p class="hero-subtitle">Our specialist team and full on-site dental lab provide fast, high-quality treatment and unbeatable value.</p>
       <div class="hero-buttons">
@@ -1606,12 +1717,35 @@
         </div>
       </div>
       <p class="outcome-disclaimer">*$2,998 offer is limited to a 6-month treatment. Not applicable to cases that have started treatment or any prior treatment.</p>
-      <div style="text-align: center; margin-top: 40px;">
+      <div style="text-align: center; margin-top: 48px;">
         <a href="#locations" class="btn-cta-teal">Book a free consult</a>
       </div>
     </div>
   </section>
 
+
+  <!-- ==========================================================
+       OFFER BLOCK
+  ========================================================== -->
+  <section class="offer-block">
+    <div class="offer-block-inner">
+      <div class="offer-block-image">
+        <img src="https://www.islanddentalassociates.com/wp-content/uploads/2024/07/gallery2-1024x685.png" alt="Patient smiling after smile makeover">
+      </div>
+      <div class="offer-block-content">
+        <h2 class="offer-headline">FREE consultation for your smile makeover</h2>
+        <p class="offer-sub">No cost. No commitment.<br class="mobile-br"> Your consultation includes:</p>
+        <ul class="offer-list">
+          <li>Free exam</li>
+          <li>Personalized treatment plan</li>
+          <li>Transparent pricing</li>
+          <li>Your questions answered</li>
+          <li>Insurance benefits explained</li>
+        </ul>
+        <a href="#" class="btn-offer">Schedule now</a>
+      </div>
+    </div>
+  </section>
 
   <!-- ==========================================================
        SERVICES LIST
@@ -1925,7 +2059,7 @@
   ========================================================== -->
   <section class="testimonials" aria-labelledby="testimonials-heading">
     <div class="container">
-      <h2 id="testimonials-heading">Real patients. Real results.</h2>
+      <h2 id="testimonials-heading">Real patients.<br class="mobile-br"> Real results.</h2>
       <div class="testimonials-grid">
         <div class="testimonial-card">
           <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
@@ -1954,7 +2088,7 @@
     <div class="container">
       <div class="reasons-inner">
         <div class="reasons-img">
-          <img src="https://www.islanddentalassociates.com/wp-content/uploads/2024/07/gallery2-1024x685.png" alt="Friendly staff at Island Dental Associates">
+          <img src="images/lab-final.png" alt="Island Dental Associates waiting room">
         </div>
         <div class="reasons-content">
           <h2 id="reasons-heading">So many reasons to smile</h2>
