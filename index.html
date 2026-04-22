@@ -177,17 +177,24 @@
       inset: 0;
       z-index: 0;
     }
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 42%;
+      bottom: 0;
+      background-size: cover;
+      background-position: 30% top;
+      background-repeat: no-repeat;
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
     .hero-bg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: left center;
-      border-radius: var(--radius);
+      display: none;
     }
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to right, rgba(10,18,50,0.82) 0%, rgba(10,18,50,0.55) 45%, rgba(10,18,50,0.0) 70%);
+      background: linear-gradient(to right, rgba(10,18,50,1.0) 0%, rgba(10,18,50,1.0) 42%, rgba(10,18,50,0.5) 58%, rgba(10,18,50,0.0) 72%);
       border-radius: var(--radius);
       z-index: 1;
     }
@@ -443,6 +450,95 @@
     .btn-offer:hover { background: #22a8b0; transform: translateY(-1px); }
 
     /* ==========================================================
+       SAME-DAY SERVICES
+    ========================================================== */
+    .same-day {
+      background: var(--navy);
+      padding: 80px 0;
+      text-align: center;
+    }
+    .same-day-eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--teal);
+      margin-bottom: 16px;
+    }
+    .same-day h2 {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 40px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .same-day-intro {
+      font-size: 17px;
+      color: rgba(255,255,255,0.75);
+      max-width: 600px;
+      margin: 0 auto 48px;
+      line-height: 1.6;
+    }
+    .same-day-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+    .same-day-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 36px 28px;
+      text-align: left;
+    }
+    .same-day-icon {
+      width: 44px;
+      height: 44px;
+      color: var(--teal);
+      margin-bottom: 20px;
+    }
+    .same-day-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+    .same-day-card h3 {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .same-day-card p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.65;
+    }
+    .same-day-cta { text-align: center; }
+
+    /* ==========================================================
+       LAB CALLOUT BOX
+    ========================================================== */
+    .lab-callout {
+      background: var(--navy);
+      padding: 72px 24px;
+      text-align: center;
+    }
+    .lab-callout .offer-headline {
+      margin-bottom: 32px;
+    }
+    .lab-callout .offer-list {
+      display: inline-block;
+      text-align: left;
+      margin-bottom: 0;
+    }
+    .lab-callout .offer-list li {
+      font-size: 18px;
+    }
+
+
+    /* ==========================================================
        OUTCOME SHOWCASE
     ========================================================== */
     .outcome {
@@ -558,7 +654,7 @@
        BEFORE & AFTER
     ========================================================== */
     .before-after {
-      padding: 80px 0 112px;
+      padding: 40px 0 80px;
       background: var(--off-white);
     }
     .before-after-header {
@@ -714,6 +810,7 @@
       overflow: hidden;
       transition: max-height 0.3s ease;
     }
+    .lab-cta { margin-top: 36px; }
     .lab-accordion-answer-inner {
       padding: 0 0 20px 44px;
       font-size: 15px;
@@ -1444,16 +1541,20 @@
         margin: 0;
         border-radius: 0;
         min-height: auto;
-        flex-direction: column;
         align-items: stretch;
+        flex-direction: column;
       }
       .hero-bg {
         position: relative;
-        height: 350px;
+        inset: auto;
+        height: 320px;
         flex-shrink: 0;
+        background-size: 120%;
+        background-position: 20% top;
       }
-      .hero-bg img { border-radius: 0; object-position: right center; }
-      .hero-overlay { display: none; }
+      .hero-overlay {
+        display: none;
+      }
       .hero-content {
         position: relative;
         background: var(--navy);
@@ -1484,6 +1585,8 @@
       .services-list-header h2 { font-size: 30px; }
       .ba-grid { grid-template-columns: 1fr; }
       .before-after-header h2 { font-size: 30px; }
+      .same-day-grid { grid-template-columns: 1fr; }
+      .same-day h2 { font-size: 28px; }
       .lab-inner { flex-direction: column; gap: 0; padding: 0 24px; }
       .lab-img-col { flex: none; width: 100%; height: auto; aspect-ratio: 1 / 1; position: relative; top: auto; }
       .lab-content-col { flex: none; width: 100%; padding-left: 0; padding-top: 32px; }
@@ -1608,8 +1711,7 @@
     VARIANT B CTA: "Start with a Free Consult"
   -->
   <section class="hero" aria-labelledby="hero-heading">
-    <div class="hero-bg">
-      <img src="images/hero-spring.png" alt="Confident woman smiling at the beach">
+    <div class="hero-bg" style="background-image: url('images/dana-brown-A-lESE9cTFg-unsplash.jpg')">
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -1777,7 +1879,7 @@
         <div class="service-item">
           <div class="service-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div>
-            <h3>Clear aligners</h3>
+            <h3>Invisalign<sup>®</sup></h3>
             <p>Removable, nearly invisible trays that straighten teeth without metal brackets.</p>
           </div>
         </div>
@@ -1833,16 +1935,16 @@
         <div class="service-item">
           <div class="service-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div>
-            <h3>Gum contouring</h3>
-            <p>Reshapes the gum line to create a more balanced, symmetrical smile.</p>
+            <h3>Dental emergencies</h3>
+            <p>Walk in or call — don't wait, we can help you now.</p>
           </div>
         </div>
 
         <div class="service-item">
           <div class="service-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div>
-            <h3>Inlays and onlays</h3>
-            <p>Precision porcelain or resin restorations for moderate decay or damage.</p>
+            <h3>Dentures</h3>
+            <p>All types of dentures made on site the same day.</p>
           </div>
         </div>
 
@@ -1854,6 +1956,109 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================
+       SAME-DAY SERVICES
+  ========================================================== -->
+  <section class="same-day" aria-labelledby="same-day-heading">
+    <div class="container">
+      <div class="same-day-eyebrow">SAME-DAY SERVICES</div>
+      <h2 id="same-day-heading">Walk in. Walk out with a smile.</h2>
+      <p class="same-day-intro">When you can't wait weeks, Island Dental delivers. Our on-site lab means most procedures are done in a single visit.</p>
+      <div class="same-day-grid">
+        <div class="same-day-card">
+          <div class="same-day-icon">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/><path d="M16 9v7l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Same-day dentures</h3>
+          <p>Get fitted, crafted and walking out with new dentures in a single visit. Our lab makes it happen in hours, not days or weeks.</p>
+        </div>
+        <div class="same-day-card">
+          <div class="same-day-icon">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 4C8 4 6 6.5 6 9.5c0 2 .8 3.8 1.5 5C8.5 16.5 9 18 9 20c0 2 .5 5 2 6.5.8.8 1.5.5 2-.5.5-1.2 1-3 3-3s2.5 1.8 3 3c.5 1 1.2 1.3 2 .5C22.5 25 23 22 23 20c0-2 .5-3.5 1.5-5.5.7-1.2 1.5-3 1.5-5 0-3-2-5.5-5-5.5-1.5 0-2.8.6-3.5 1-.5.3-.8.5-1.5.5s-1-.2-1.5-.5C13.8 4.6 12.5 4 11 4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Same-day teeth replacement</h3>
+          <p>Missing a tooth? Our implant specialists and on-site lab work together so you can leave with a restoration the same day you arrive.</p>
+        </div>
+        <div class="same-day-card">
+          <div class="same-day-icon">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 3L3 27h26L16 3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M16 13v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="23" r="1" fill="currentColor"/></svg>
+          </div>
+          <h3>Denture emergencies</h3>
+          <p>Broken, cracked or ill-fitting denture? Come in today. We repair and adjust on the spot so you're never without your smile for long.</p>
+        </div>
+      </div>
+      <div class="same-day-cta">
+        <a href="#locations" class="btn-cta-teal">Book a same-day appointment</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       ON-SITE DENTAL LAB
+  ========================================================== -->
+  <section class="lab" aria-labelledby="lab-heading">
+    <div class="lab-inner">
+      <div class="lab-img-col">
+        <img src="images/lab-onsite.png" alt="Island Dental Associates on-site dental lab">
+      </div>
+      <div class="lab-content-col">
+        <h2 id="lab-heading">Full state-of-the-art dental lab on premise</h2>
+        <p class="lab-intro">Most dental offices send your work to an outside lab and ask you to wait weeks. We don't. Crowns, implants, dentures — everything is designed, crafted, fitted and adjusted right here. Here's what that means for you.</p>
+        <div class="lab-accordion">
+          <div class="lab-accordion-item">
+            <button class="lab-accordion-btn" aria-expanded="false">
+              <span class="lab-acc-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></span>
+              Same-day and next-day restorations
+            </button>
+            <div class="lab-accordion-answer">
+              <div class="lab-accordion-answer-inner">Crowns, implants, and dentures without the weeks-long wait. Our lab works in real time with your dentist to get you in and out faster.</div>
+            </div>
+          </div>
+          <div class="lab-accordion-item">
+            <button class="lab-accordion-btn" aria-expanded="false">
+              <span class="lab-acc-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></span>
+              You try it on before we finish
+            </button>
+            <div class="lab-accordion-answer">
+              <div class="lab-accordion-answer-inner">Whether it's a denture, crown or implant restoration, you see and feel the result before it's finalized. If something needs adjusting — the fit, the bite, the look — we handle it right then. You only leave with a result you love.</div>
+            </div>
+          </div>
+          <div class="lab-accordion-item">
+            <button class="lab-accordion-btn" aria-expanded="false">
+              <span class="lab-acc-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></span>
+              Better fit, more comfort, longer lasting
+            </button>
+            <div class="lab-accordion-answer">
+              <div class="lab-accordion-answer-inner">When your dentist and lab technicians work together in the same building, the result fits more precisely, feels more comfortable and holds up better over time.</div>
+            </div>
+          </div>
+          <div class="lab-accordion-item">
+            <button class="lab-accordion-btn" aria-expanded="false">
+              <span class="lab-acc-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></span>
+              Hundreds of shades, sizes and custom options
+            </button>
+            <div class="lab-accordion-answer">
+              <div class="lab-accordion-answer-inner">From tooth shade to material to shape, every detail is matched to you — not a one-size-fits-all lab order.</div>
+            </div>
+          </div>
+          <div class="lab-accordion-item">
+            <button class="lab-accordion-btn" aria-expanded="false">
+              <span class="lab-acc-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></span>
+              Repairs and adjustments while you wait
+            </button>
+            <div class="lab-accordion-answer">
+              <div class="lab-accordion-answer-inner">Broken crown, loose implant, cracked denture — most repairs are done the same day. No outside lab, no waiting days without your teeth.</div>
+            </div>
+          </div>
+        </div>
+        <div class="lab-cta">
+          <a href="#locations" class="btn-cta-teal">Book a free consultation</a>
+        </div>
       </div>
     </div>
   </section>
@@ -1885,6 +2090,21 @@
       <div style="text-align: center; margin-top: 48px;">
         <a href="#locations" class="btn-cta-teal">Get started</a>
       </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================
+       COMPONENT 4 — FREE CONSULT OFFER (replaces Why Now?)
+  ========================================================== -->
+  <section class="free-consult" aria-labelledby="free-consult-heading">
+    <div class="free-consult-content">
+      <h2 id="free-consult-heading">Make this the summer of smiles</h2>
+      <p class="free-consult-sub">Summer is when the calendar fills up. If you've been meaning to do something about your smile, this is the moment. Not someday. Now.</p>
+      <a href="#locations" class="btn-amber">Schedule now</a>
+    </div>
+    <div class="free-consult-img">
+      <img src="images/beach-man.jpg" alt="Man smiling on the beach">
     </div>
   </section>
 
@@ -1932,11 +2152,11 @@
           <div class="ba-card-label">Invisalign<sup>®</sup></div>
           <div class="ba-images">
             <div class="ba-img-wrap">
-              <img src="images/img04-before.jpg" alt="Before Invisalign treatment">
+              <img src="images/invisalign-before.jpg" alt="Before Invisalign treatment">
               <span class="ba-badge">Before</span>
             </div>
             <div class="ba-img-wrap">
-              <img src="images/img04-after.jpg" alt="After Invisalign treatment">
+              <img src="images/invisalign-after.jpg" alt="After Invisalign treatment">
               <span class="ba-badge">After</span>
             </div>
           </div>
@@ -1961,86 +2181,10 @@
   </section>
 
 
-  <!-- ==========================================================
-       COMPONENT 4 — FREE CONSULT OFFER (replaces Why Now?)
-  ========================================================== -->
-  <section class="free-consult" aria-labelledby="free-consult-heading">
-    <div class="free-consult-content">
-      <h2 id="free-consult-heading">Make this the summer of smiles</h2>
-      <p class="free-consult-sub">Summer is when the calendar fills up. If you've been meaning to do something about your smile, this is the moment. Not someday. Now.</p>
-      <a href="#locations" class="btn-amber">Schedule now</a>
-    </div>
-    <div class="free-consult-img">
-      <img src="images/beach-man.jpg" alt="Man smiling on the beach">
-    </div>
-  </section>
 
 
-  <!-- ==========================================================
-       ON-SITE DENTAL LAB
-  ========================================================== -->
-  <section class="lab" aria-labelledby="lab-heading">
-    <div class="lab-inner">
-      <div class="lab-img-col">
-        <img src="images/lab-tech.jpeg" alt="Dental technicians working in the on-site lab">
-      </div>
-      <div class="lab-content-col">
-        <h2 id="lab-heading">Full state-of-the-art dental lab on premise</h2>
-        <p class="lab-intro">Here's what having everything on site gets you.</p>
-        <div class="lab-accordion">
-          <div class="lab-accordion-item">
-            <button class="lab-accordion-btn" aria-expanded="false">
-              <span class="lab-acc-icon"><svg viewBox="0 0 12 12" fill="none"><line x1="6" y1="2" x2="6" y2="10" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="2" y1="6" x2="10" y2="6" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></span>
-              Fast turnaround
-            </button>
-            <div class="lab-accordion-answer"><div class="lab-accordion-answer-inner">No external shipping and production delays means you'll get your crowns, bridges and dentures in less time.</div></div>
-          </div>
-          <div class="lab-accordion-item">
-            <button class="lab-accordion-btn" aria-expanded="false">
-              <span class="lab-acc-icon"><svg viewBox="0 0 12 12" fill="none"><line x1="6" y1="2" x2="6" y2="10" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="2" y1="6" x2="10" y2="6" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></span>
-              Reduced cost
-            </button>
-            <div class="lab-accordion-answer"><div class="lab-accordion-answer-inner">Eliminating external labs makes high-quality dental care less expensive – savings that are passed on to you.</div></div>
-          </div>
-          <div class="lab-accordion-item">
-            <button class="lab-accordion-btn" aria-expanded="false">
-              <span class="lab-acc-icon"><svg viewBox="0 0 12 12" fill="none"><line x1="6" y1="2" x2="6" y2="10" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="2" y1="6" x2="10" y2="6" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></span>
-              Precision customization
-            </button>
-            <div class="lab-accordion-answer"><div class="lab-accordion-answer-inner">Enjoy real-time adjustments and restorations that are highly personalized to your unique needs and preferences.</div></div>
-          </div>
-          <div class="lab-accordion-item">
-            <button class="lab-accordion-btn" aria-expanded="false">
-              <span class="lab-acc-icon"><svg viewBox="0 0 12 12" fill="none"><line x1="6" y1="2" x2="6" y2="10" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="2" y1="6" x2="10" y2="6" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></span>
-              Better communication
-            </button>
-            <div class="lab-accordion-answer"><div class="lab-accordion-answer-inner">Your treatment process is smoother thanks to seamless communication between your dentist and on-site lab technicians.</div></div>
-          </div>
-          <div class="lab-accordion-item">
-            <button class="lab-accordion-btn" aria-expanded="false">
-              <span class="lab-acc-icon"><svg viewBox="0 0 12 12" fill="none"><line x1="6" y1="2" x2="6" y2="10" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="2" y1="6" x2="10" y2="6" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></span>
-              Better quality control
-            </button>
-            <div class="lab-accordion-answer"><div class="lab-accordion-answer-inner">Direct oversight by our expert team means each restoration is crafted to the highest standards – for the best fit with lasting wear.</div></div>
-          </div>
-          <div class="lab-accordion-item">
-            <button class="lab-accordion-btn" aria-expanded="false">
-              <span class="lab-acc-icon"><svg viewBox="0 0 12 12" fill="none"><line x1="6" y1="2" x2="6" y2="10" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="2" y1="6" x2="10" y2="6" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></span>
-              Immediate repairs &amp; adjustments
-            </button>
-            <div class="lab-accordion-answer"><div class="lab-accordion-answer-inner">We'll make repairs and adjustments on the spot to minimize discomfort and downtime for you.</div></div>
-          </div>
-          <div class="lab-accordion-item">
-            <button class="lab-accordion-btn" aria-expanded="false">
-              <span class="lab-acc-icon"><svg viewBox="0 0 12 12" fill="none"><line x1="6" y1="2" x2="6" y2="10" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="2" y1="6" x2="10" y2="6" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></span>
-              Greater convenience
-            </button>
-            <div class="lab-accordion-answer"><div class="lab-accordion-answer-inner">Having everything in one place means fewer appointments to fit into your schedule and less time at the dental office.</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
+
 
 
 
