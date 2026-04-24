@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "islanddental-spring",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["serve.py"],
+      "runtimeExecutable": "/usr/bin/python3",
+      "runtimeArgs": ["-m", "http.server", "8788"],
       "port": 8788
     }
   ]
