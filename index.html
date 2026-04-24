@@ -167,26 +167,23 @@
       min-height: 660px;
       display: flex;
       align-items: center;
-      border-radius: var(--radius);
+      border-radius: 32px;
       margin: 0 auto;
       max-width: 1296px;
       isolation: isolate;
     }
     .hero-bg {
       position: absolute;
-      inset: 0;
-      z-index: 0;
-    }
-    .hero-bg {
-      position: absolute;
       top: 0;
       right: 0;
-      left: 42%;
+      left: 0;
       bottom: 0;
+      z-index: 0;
       background-size: cover;
-      background-position: 30% top;
+      background-position: center top;
       background-repeat: no-repeat;
-      border-radius: 0 var(--radius) var(--radius) 0;
+      border-radius: 32px;
+      filter: brightness(1.35) saturate(1.35);
     }
     .hero-bg img {
       display: none;
@@ -194,8 +191,8 @@
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to right, rgba(10,18,50,1.0) 0%, rgba(10,18,50,1.0) 42%, rgba(10,18,50,0.5) 58%, rgba(10,18,50,0.0) 72%);
-      border-radius: var(--radius);
+      background: linear-gradient(to right, rgba(15,28,73,0.82) 0%, rgba(15,28,73,0.72) 25%, rgba(15,28,73,0.25) 52%, rgba(15,28,73,0) 65%);
+      border-radius: 32px;
       z-index: 1;
     }
     .hero-content {
@@ -203,33 +200,32 @@
       z-index: 2;
       box-sizing: border-box;
       padding: 80px 72px;
-      max-width: min(580px, 46%);
+      max-width: 606px;
     }
     .hero-eyebrow {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Nunito Sans', sans-serif;
       font-weight: 800;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+      font-size: 24px;
       color: var(--yellow);
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
     .hero h1 {
       font-family: 'Nunito Sans', sans-serif;
-      font-size: 56px;
+      font-size: 72px;
       font-weight: 500;
       color: var(--white);
-      line-height: 1.08;
-      margin-bottom: 20px;
+      line-height: 76px;
+      letter-spacing: -0.44px;
+      margin-bottom: 16px;
     }
     .hero-subtitle {
       font-family: 'Nunito Sans', sans-serif;
-      font-size: 18px;
-      font-weight: 400;
-      color: rgba(255,255,255,0.88);
-      line-height: 1.6;
+      font-size: 19.2px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.9);
+      line-height: 28.8px;
       margin-bottom: 36px;
-      max-width: 440px;
+      max-width: 412px;
     }
     .hero-buttons {
       display: flex;
@@ -1711,7 +1707,7 @@
     VARIANT B CTA: "Start with a Free Consult"
   -->
   <section class="hero" aria-labelledby="hero-heading">
-    <div class="hero-bg" style="background-image: url('images/dana-brown-A-lESE9cTFg-unsplash.jpg')">
+    <div class="hero-bg" style="background-image: url('images/image-1776991439961.jpg')">
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
