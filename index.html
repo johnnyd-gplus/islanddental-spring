@@ -200,32 +200,33 @@
       z-index: 2;
       box-sizing: border-box;
       padding: 80px 72px;
-      max-width: 606px;
+      max-width: 520px;
     }
     .hero-eyebrow {
-      font-family: 'Nunito Sans', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       font-weight: 800;
-      font-size: 24px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
       color: var(--yellow);
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
     .hero h1 {
       font-family: 'Nunito Sans', sans-serif;
-      font-size: 72px;
+      font-size: 56px;
       font-weight: 500;
       color: var(--white);
-      line-height: 76px;
-      letter-spacing: -0.44px;
-      margin-bottom: 16px;
+      line-height: 1.08;
+      margin-bottom: 20px;
     }
     .hero-subtitle {
       font-family: 'Nunito Sans', sans-serif;
-      font-size: 19.2px;
-      font-weight: 600;
-      color: rgba(255,255,255,0.9);
-      line-height: 28.8px;
+      font-size: 18px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.88);
+      line-height: 1.6;
       margin-bottom: 36px;
-      max-width: 412px;
+      max-width: 440px;
     }
     .hero-buttons {
       display: flex;
@@ -1536,6 +1537,7 @@
       .hero {
         margin: 0;
         border-radius: 0;
+        max-width: 100%;
         min-height: auto;
         align-items: stretch;
         flex-direction: column;
@@ -1545,8 +1547,9 @@
         inset: auto;
         height: 320px;
         flex-shrink: 0;
-        background-size: 120%;
-        background-position: 20% top;
+        background-size: cover;
+        background-position: right top;
+        border-radius: 0;
       }
       .hero-overlay {
         display: none;
